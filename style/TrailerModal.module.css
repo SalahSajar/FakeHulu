@@ -1,0 +1,40 @@
+.trailer_modal--BLOCK {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.trailer_modal--BLOCK[data-visible="true"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trailer_modal--BLOCK .trailer_modal_content--CONTAINER {
+  position: relative;
+  padding-top: 5rem;
+  width: 70rem;
+  background-color: #000;
+}
+
+.trailer_modal--BLOCK .trailer_modal_content--CONTAINER .close_trailer_modal--BTN {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.3rem;
+}
+
+.trailer_modal--BLOCK .trailer_modal_content--CONTAINER .close_trailer_modal--BTN img {
+  -webkit-filter: invert(100%) sepia(58%) saturate(0%) hue-rotate(101deg) brightness(110%) contrast(101%);
+          filter: invert(100%) sepia(58%) saturate(0%) hue-rotate(101deg) brightness(110%) contrast(101%);
+}
+
+.trailer_modal--BLOCK .trailer_modal_content--CONTAINER .trailer_video--EL {
+  display: block;
+  aspect-ratio: 16/9;
+}
+/*# sourceMappingURL=TrailerModal.module.css.map */

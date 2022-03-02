@@ -1,0 +1,54 @@
+.signupMessage_block--CONTAINER {
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-animation: signupModalAnimation 5s linear forwards;
+          animation: signupModalAnimation 5s linear forwards;
+}
+
+@-webkit-keyframes signupModalAnimation {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  10%,
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes signupModalAnimation {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  10%,
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+.signupMessage_block--CONTAINER.errorModal--EL {
+  background-color: #f71515;
+}
+
+.signupMessage_block--CONTAINER.successModal--EL {
+  background-color: #15f79b;
+}
+
+.signupMessage_block--CONTAINER .signupMessage--EL {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+/*# sourceMappingURL=SignupMessageModal.module.css.map */

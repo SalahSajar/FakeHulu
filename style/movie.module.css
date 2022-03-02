@@ -1,0 +1,71 @@
+.movie_details--BLOCK {
+  position: relative;
+}
+
+.movie_details--BLOCK .return_link--EL {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.movie_details--BLOCK .return_link--EL img {
+  width: 4rem;
+}
+
+.movie_details--BLOCK .movie_details_pageHeader--EL {
+  height: 100vh;
+}
+
+.movie_details--BLOCK .movie_details_pageHeader--EL .error_modal--EL {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.movie_details--BLOCK .movie_details_pageHeader--EL .error_modal--EL .error_content_block--EL {
+  width: 60rem;
+  color: #eee;
+  text-align: center;
+}
+
+.movie_details--BLOCK .movie_details_pageHeader--EL .error_modal--EL .error_content_block--EL .error_icon--IMG {
+  width: 7rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.movie_details--BLOCK .movie_details_pageHeader--EL .error_modal--EL .error_content_block--EL .error_message--EL {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 1rem 0 2rem;
+}
+
+.movie_details--BLOCK .movie_details_pageHeader--EL .error_modal--EL .error_content_block--EL .reload--BTN {
+  display: inline-block;
+  background: none;
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid #fff;
+  border-radius: 30rem;
+  cursor: pointer;
+}
+
+.movie_details--BLOCK .movie_recommendations--BLOCK {
+  padding: 3rem;
+}
+
+.movie_details--BLOCK .movie_recommendations--BLOCK .movie_recommendations_title--EL {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=movie.module.css.map */

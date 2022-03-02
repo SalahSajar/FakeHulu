@@ -1,0 +1,94 @@
+.search--BLOCK {
+  padding: 0 2rem;
+}
+
+.search--BLOCK .search_header--WRAPPER {
+  padding-top: 5rem;
+}
+
+.search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER {
+  max-width: 60rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER h2 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER h2 {
+    font-size: 3rem;
+  }
+}
+
+.search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER .search_form--EL .search_form_content--WRAPPER {
+  height: 3.2rem;
+}
+
+.search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER .search_form--EL .search_form_content--WRAPPER .search_input--EL {
+  height: 100%;
+  width: 30rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  background-color: #aaa;
+  color: #111;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+}
+
+.search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER .search_form--EL .search_form_content--WRAPPER .search_form_submit--BTN {
+  height: 100%;
+  margin-left: 1.5rem;
+  padding: 0 1.5rem;
+  background: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 0.3rem;
+  border: 1px solid #eee;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+
+.search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER .search_form--EL .search_form_content--WRAPPER .search_form_submit--BTN:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER .defaultSearch--BTN {
+  display: inline-block;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.3rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+}
+
+.search--BLOCK .search_header--WRAPPER .search_header_content--CONTAINER .defaultSearch--BTN:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.search--BLOCK hr {
+  max-width: 60rem;
+  margin: 5rem auto;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+/*# sourceMappingURL=SearchLayout.module.css.map */

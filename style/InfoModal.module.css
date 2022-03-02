@@ -1,0 +1,65 @@
+.inputHeader--CONTAINER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inputHeader--CONTAINER .moreInfos_btn--EL {
+  position: relative;
+  margin-left: 0.3rem;
+}
+
+.inputHeader--CONTAINER .moreInfos_btn--EL[data-expanded="false"] .infoModal_content--WRAPPER {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.inputHeader--CONTAINER .moreInfos_btn--EL .infoModal--BTN {
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  width: 1.4rem;
+  vertical-align: super;
+  cursor: pointer;
+}
+
+.inputHeader--CONTAINER .moreInfos_btn--EL .infoModal--BTN img {
+  width: 100%;
+}
+
+.inputHeader--CONTAINER .moreInfos_btn--EL .infoModal_content--WRAPPER {
+  pointer-events: unset;
+  width: 30rem;
+  position: absolute;
+  bottom: calc(100% + 1.5rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 3rem 2.5rem;
+  background-color: #fff;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #686363;
+  -webkit-box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.2);
+}
+
+.inputHeader--CONTAINER .moreInfos_btn--EL .infoModal_content--WRAPPER::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid #fff;
+}
+/*# sourceMappingURL=InfoModal.module.css.map */

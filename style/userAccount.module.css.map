@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../styles/userAccount/userAccount.module.scss"
+    ],
+    "names": [],
+    "file": "userAccount.module.css"
+}

@@ -1,0 +1,129 @@
+.searchChannelsByZip_content--CONTAINER {
+  min-height: 35rem;
+  max-height: 50rem;
+  overflow-y: scroll;
+}
+
+.searchChannelsByZip_content--CONTAINER::-webkit-scrollbar {
+  width: 0;
+}
+
+.searchChannelsByZip_content--CONTAINER .ChannelsAreaSearcherModal_title--EL {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #444;
+}
+
+.searchChannelsByZip_content--CONTAINER .searchChannelsByZip_form--EL {
+  margin: 2rem 0;
+}
+
+.searchChannelsByZip_content--CONTAINER .searchChannelsByZip_form--EL label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.searchChannelsByZip_content--CONTAINER .searchChannelsByZip_form--EL .searchChannelsByZip_input--CONTAINER {
+  max-width: 30rem;
+  height: 3.8rem;
+}
+
+.searchChannelsByZip_content--CONTAINER .searchChannelsByZip_form--EL .searchChannelsByZip_input--CONTAINER input {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.searchChannelsByZip_content--CONTAINER .searchChannelsByZip_form--EL .searchChannelsByZip_input--CONTAINER input::-webkit-outer-spin-button, .searchChannelsByZip_content--CONTAINER .searchChannelsByZip_form--EL .searchChannelsByZip_input--CONTAINER input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.searchChannelsByZip_content--CONTAINER .searchChannelsByZip_form--EL .searchChannelsByZip_input--CONTAINER button {
+  height: 100%;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  outline: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 2.3rem;
+}
+
+.searchChannelsByZip_content--CONTAINER .searchChannelsByZip_form--EL .searchChannelsByZip_input--CONTAINER button:hover {
+  background-color: #333;
+}
+
+.searchChannelsByZip_content--CONTAINER .searchChannelsByZip_Typo--EL {
+  width: 75%;
+  font-size: 1.35rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 700px) {
+  .searchChannelsByZip_content--CONTAINER .searchChannelsByZip_Typo--EL {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+.searchChannelsByZip_content--CONTAINER hr {
+  margin: 2rem 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.searchChannelsByZip_content--CONTAINER .channel_category--EL {
+  width: 100%;
+}
+
+.searchChannelsByZip_content--CONTAINER .channel_category--EL .channelCategory_title--EL {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.searchChannelsByZip_content--CONTAINER .channel_category--EL .channelCategoty_networkIcons--CONTAINER {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -webkit-column-gap: calc(2rem + (50 - 20) * ((100vw - 450px) / (1600 - 450)));
+          column-gap: calc(2rem + (50 - 20) * ((100vw - 450px) / (1600 - 450)));
+  row-gap: 1rem;
+  margin: 4.5rem 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .searchChannelsByZip_content--CONTAINER .channel_category--EL .channelCategoty_networkIcons--CONTAINER {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.searchChannelsByZip_content--CONTAINER .channel_category--EL .channelCategoty_networkIcons--CONTAINER .channelCategoty_networkIcon--CONTAINER {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.searchChannelsByZip_content--CONTAINER .channel_category--EL .channelCategoty_networkIcons--CONTAINER .channelCategoty_networkIcon--CONTAINER img {
+  width: 80%;
+}
+/*# sourceMappingURL=channelsAreaSearcherModal.module.css.map */

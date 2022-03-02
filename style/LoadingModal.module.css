@@ -1,0 +1,22 @@
+.loading_modal--EL {
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.loading_modal--EL.vertical_spacing {
+  padding-top: 7rem;
+}
+
+.loading_modal--EL.large_height_loadingModal {
+  height: calc(100vh - 6.4rem);
+}
+
+.loading_modal--EL img {
+  width: 7rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+/*# sourceMappingURL=LoadingModal.module.css.map */

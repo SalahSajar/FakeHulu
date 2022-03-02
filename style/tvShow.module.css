@@ -1,0 +1,287 @@
+.tvShow_details--BLOCK {
+  position: relative;
+}
+
+.tvShow_details--BLOCK .return_link--EL {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.tvShow_details--BLOCK .return_link--EL img {
+  width: 4rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL {
+  height: 100vh;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .loading_modal--EL {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .loading_modal--EL img {
+  width: 7rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .error_modal--EL {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .error_modal--EL .error_content_block--EL {
+  width: 60rem;
+  color: #eee;
+  text-align: center;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .error_modal--EL .error_content_block--EL .error_icon--IMG {
+  width: 7rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .error_modal--EL .error_content_block--EL .error_message--EL {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 1rem 0 2rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .error_modal--EL .error_content_block--EL .reload--BTN {
+  display: inline-block;
+  background: none;
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid #fff;
+  border-radius: 30rem;
+  cursor: pointer;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER {
+  padding: 4rem 2rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  background-size: cover;
+  background-position: center;
+  background-color: #0b2a23;
+  background-blend-mode: overlay;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_image--WRAPPER {
+  height: inherit;
+  aspect-ratio: 0.66;
+  -webkit-box-shadow: 0 0 4rem -0.3rem black;
+          box-shadow: 0 0 4rem -0.3rem black;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_image--WRAPPER img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: none;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_details_header--CONTAINER {
+  color: #fff;
+  padding: 1.5rem 3rem;
+  border-left: 0.3rem solid #fff;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_details_header--CONTAINER .tvShow_title--EL {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_details_header--CONTAINER .tvShow_mini_details--EL {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_description--CONTAINER .tvShow_description_header--EL {
+  display: block;
+  color: #ccc;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_description--CONTAINER .tvShow_decription--EL {
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_ratings--CONTAINER .tvShow_ratings_header--EL {
+  display: block;
+  color: #ccc;
+  font-size: 1.5rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_ratings--CONTAINER .tvShow_rating_block--EL {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_ratings--CONTAINER .tvShow_rating_block--EL img {
+  display: block;
+  width: 5rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_companies--CONTAINER .tvShow_companies_header--EL {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+  font-size: 1.5rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_companies--CONTAINER .tvShow_companies_blocks--WRAPPER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_companies--CONTAINER .tvShow_companies_blocks--WRAPPER .tvShow_company_details--BLOCK {
+  text-align: center;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_companies--CONTAINER .tvShow_companies_blocks--WRAPPER .tvShow_company_details--BLOCK .tvShow_company_image--EL {
+  width: 5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  text-align: center;
+  margin: auto;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_companies--CONTAINER .tvShow_companies_blocks--WRAPPER .tvShow_company_details--BLOCK .tvShow_company_image--EL img {
+  width: 85%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .tvShow_companies--CONTAINER .tvShow_companies_blocks--WRAPPER .tvShow_company_details--BLOCK .tvShow_company_title--EL {
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button {
+  background: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  border-radius: 30rem;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button.watchTrailer--BTN {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button.watchTrailer--BTN img {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(328deg) brightness(102%) contrast(102%);
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button.tvShow_watchlist--BTN:disabled {
+  cursor: wait;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button.tvShow_watchlist--BTN.addToWatchlist_BTN {
+  border-color: #ee0b0b;
+  color: #ee0b0b;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button.tvShow_watchlist--BTN.addToWatchlist_BTN img {
+  -webkit-filter: invert(29%) sepia(66%) saturate(6020%) hue-rotate(349deg) brightness(86%) contrast(120%);
+          filter: invert(29%) sepia(66%) saturate(6020%) hue-rotate(349deg) brightness(86%) contrast(120%);
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button.tvShow_watchlist--BTN.removeFromWatchlist_BTN {
+  border-color: #aeb42b;
+  color: #aeb42b;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button.tvShow_watchlist--BTN.removeFromWatchlist_BTN img {
+  -webkit-filter: invert(76%) sepia(13%) saturate(2322%) hue-rotate(19deg) brightness(92%) contrast(80%);
+          filter: invert(76%) sepia(13%) saturate(2322%) hue-rotate(19deg) brightness(92%) contrast(80%);
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button.tvShow_watchlist--BTN .watchlist_loading--IMG {
+  height: 2rem;
+  vertical-align: text-top;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button .movies_cta_icon--CONTAINER {
+  margin-left: 0.7rem;
+}
+
+.tvShow_details--BLOCK .tvShow_details_pageHeader--EL .tvShowdetails_content--CONTAINER .tvShow_details--WRAPPER .movies_cta_btns--CONTAINER button .movies_cta_icon--CONTAINER img {
+  width: 1.7rem;
+  vertical-align: text-top;
+}
+
+.tvShow_details--BLOCK .tvShow_recommendations--BLOCK {
+  padding: 3rem;
+}
+
+.tvShow_details--BLOCK .tvShow_recommendations--BLOCK .tvShow_recommendations_title--EL {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=tvShow.module.css.map */

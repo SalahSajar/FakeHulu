@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACtB,KAAK,EAAE,IAAI;EACX,YAAY,EAAE,GAAG;CAOlB;;AATD,AAIE,uBAJqB,CAIrB,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,OAAO;CACpB",
+    "sources": [
+        "../styles/SignupModals/Loading.module.scss"
+    ],
+    "names": [],
+    "file": "Loading.module.css"
+}

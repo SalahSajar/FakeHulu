@@ -1,0 +1,179 @@
+.mainNavbar--EL {
+  padding: 0 calc(3rem + (60 - 30) * ((100vw - 400px) / (1600 - 400)));
+  height: 6.4rem;
+}
+
+.mainNavbar--EL.signupPage_navbar--EL {
+  background-color: #fff;
+}
+
+.mainNavbar--EL.signupPage_navbar--EL a {
+  color: #222;
+}
+
+.mainNavbar--EL.signupPage_navbar--EL a:hover {
+  color: #575555;
+}
+
+.mainNavbar--EL.accountNavbar--EL {
+  border-bottom: 1px solid #0a3d4d;
+}
+
+.mainNavbar--EL.accountNavbar--EL .navbar_menu--BTN {
+  display: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.mainNavbar--EL.accountNavbar--EL .navbar_menu--BTN img {
+  height: 3rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+@media only screen and (max-width: 700px) {
+  .mainNavbar--EL.accountNavbar--EL .navbar_menu--BTN {
+    display: inline-block;
+  }
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  list-style: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER {
+    height: 100vh;
+    background-color: #062731;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 3rem;
+    padding: 1rem;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER.openNavbarMenu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL {
+  position: relative;
+  padding: 0.5rem 2rem;
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL:hover::after {
+  opacity: 1;
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL::after {
+  content: "";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL::after {
+    opacity: 1;
+  }
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL.activeLink::after {
+  opacity: 1;
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL.homeLink::after {
+  content: "home";
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL.trendingLink::after {
+  content: "trending";
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL.playlistLink::after {
+  content: "watchlist";
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL.moviesLink::after {
+  content: "movies";
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL.tvShowsLink::after {
+  content: "TV Shows";
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL.usersLink::after {
+  content: "actors";
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL.githubLink::after {
+  content: "github";
+}
+
+.mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL img {
+  height: 2.2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .mainNavbar--EL.accountNavbar--EL .accountSubpages_links--CONTAINER li .account_subpage_link--EL img {
+    height: 2.5rem;
+  }
+}
+
+.mainNavbar--EL .hulu_nav_logo--WRAPPER {
+  width: 6rem;
+}
+
+.mainNavbar--EL .hulu_nav_logo--WRAPPER img {
+  width: inherit;
+}
+
+.mainNavbar--EL a {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: #eef;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.mainNavbar--EL a:hover {
+  color: #ccd;
+}
+/*# sourceMappingURL=Navbar.module.css.map */

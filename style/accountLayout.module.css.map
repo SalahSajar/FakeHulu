@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../styles/Layouts/accountLayout.module.scss"
+    ],
+    "names": [],
+    "file": "accountLayout.module.css"
+}

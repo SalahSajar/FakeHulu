@@ -1,0 +1,40 @@
+.error_modal--EL .error_content_block--EL {
+  text-align: center;
+  color: #eee;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.movies--SECTION {
+  padding: 0 2rem;
+}
+
+.movies--SECTION .shows_Highlighter--EL .showsType--CONTAINER {
+  padding: 5rem 0;
+}
+
+.movies--SECTION .shows_Highlighter--EL .showsType--CONTAINER:not(:last-of-type) {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.07);
+}
+
+.movies--SECTION .shows_Highlighter--EL .showsType--CONTAINER .showsType_header--EL {
+  color: #aaa;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
+
+.movies--SECTION .shows_Highlighter--EL .showsType--CONTAINER .shows--CONTAINER {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  overflow-x: scroll;
+}
+/*# sourceMappingURL=home.module.css.map */

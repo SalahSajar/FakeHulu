@@ -1,0 +1,91 @@
+.signupAccount_main--EL {
+  background-color: #def;
+  position: relative;
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER {
+  background-color: #fff;
+  padding: 4rem;
+  -webkit-box-shadow: 0 1rem 2rem -1.7rem rgba(0, 0, 0, 0.438);
+          box-shadow: 0 1rem 2rem -1.7rem rgba(0, 0, 0, 0.438);
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER .form_fieldset--EL {
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER .form_fieldset--EL:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER .form_fieldset--EL[data-inputerror="true"] .form_input--EL {
+  border-color: #cc000d;
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER .form_fieldset--EL[data-inputerror="true"] .inputError--EL {
+  visibility: visible;
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER .form_fieldset--EL label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #636e85;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER .form_fieldset--EL .form_input--EL {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.3rem;
+  border: 2px solid #b9bfc8;
+  border-radius: 0.5rem;
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER .form_fieldset--EL .inputError--EL {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #cc000d;
+  visibility: hidden;
+}
+
+.signupAccount_main--EL .signUp_form--EL .formInputs--CONTAINER .form_fieldset--EL .inputError--EL img {
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  vertical-align: top;
+}
+
+.signupAccount_main--EL .signUp_form--EL .form_footer--CONTAINER {
+  text-align: center;
+}
+
+.signupAccount_main--EL .signUp_form--EL .form_footer--CONTAINER .terms--EL {
+  display: block;
+  margin: 3.5rem 0;
+  font-size: 1.2rem;
+  color: #373e4b;
+}
+
+.signupAccount_main--EL .signUp_form--EL .form_footer--CONTAINER .submitAccountForm--BTN {
+  width: 100%;
+  max-width: 35rem;
+  padding: 1.2rem 0;
+  background-color: #272c35;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.signupAccount_main--EL .signUp_form--EL .form_footer--CONTAINER .submitAccountForm--BTN:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+/*# sourceMappingURL=Account.module.css.map */

@@ -1,0 +1,44 @@
+.modal--EL {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal--EL .modal--WRAPPER {
+  background-color: #fff;
+  padding: 3rem;
+  width: 100%;
+}
+
+.modal--EL .modal--WRAPPER.sm_modal {
+  max-width: 35rem;
+}
+
+.modal--EL .modal--WRAPPER.md_modal {
+  max-width: 85rem;
+}
+
+.modal--EL .modal--WRAPPER .modal_content--CONTAINER .modal_header--EL {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.modal--EL .modal--WRAPPER .modal_content--CONTAINER .modal_header--EL img {
+  width: 1.5rem;
+}
+
+.modal--EL .modal--WRAPPER .modal_content--CONTAINER .modal_body--EL {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=Modal.module.css.map */

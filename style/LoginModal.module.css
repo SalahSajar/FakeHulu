@@ -1,0 +1,77 @@
+.loginModal_title--EL {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #151516;
+}
+
+.login_form--EL {
+  display: block;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.login_form--EL .loginError--EL {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  color: red;
+  visibility: hidden;
+}
+
+.login_form--EL .loginError--EL.loginErrorActivate {
+  visibility: visible;
+}
+
+.login_form--EL .login_form--CONTAINER .loginForm_input--WRAPPER:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+.login_form--EL .login_form--CONTAINER label {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #636e85;
+}
+
+.login_form--EL .login_form--CONTAINER input {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.3rem;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 0.2rem;
+}
+
+.login_form--EL .findEmailOrPassword_btn--EL {
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: 1.2rem;
+}
+
+.login_form--EL .recaptch_block--CONTAINER {
+  margin: 3.5rem 0;
+}
+
+.login_form--EL .login_btn--EL {
+  width: 100%;
+  padding: 1.2rem 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #828282;
+  color: #fff;
+  cursor: pointer;
+}
+
+.signUp_directioning--EL {
+  display: block;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #636e85;
+}
+/*# sourceMappingURL=LoginModal.module.css.map */

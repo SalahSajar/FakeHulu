@@ -1,0 +1,95 @@
+.actors_search--BLOCK {
+  padding: 0 2rem;
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER {
+  padding-top: 5rem;
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER .actors_search_header_content--CONTAINER {
+  width: 60rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER .actors_search_header_content--CONTAINER h2 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER .actors_search_header_content--CONTAINER .actors_search_form--EL .actors_search_form_content--WRAPPER {
+  height: 3.2rem;
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER .actors_search_header_content--CONTAINER .actors_search_form--EL .actors_search_form_content--WRAPPER .actors_search_input--EL {
+  height: 100%;
+  width: 30rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  background-color: #aaa;
+  color: #111;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER .actors_search_header_content--CONTAINER .actors_search_form--EL .actors_search_form_content--WRAPPER .actors_search_form_submit--BTN {
+  height: 100%;
+  margin-left: 1.5rem;
+  padding: 0 1.5rem;
+  background: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 0.3rem;
+  border: 1px solid #eee;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER .actors_search_header_content--CONTAINER .actors_search_form--EL .actors_search_form_content--WRAPPER .actors_search_form_submit--BTN:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER .actors_search_header_content--CONTAINER .mostPopularActors--BTN {
+  display: inline-block;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.3rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+}
+
+.actors_search--BLOCK .actors_search_header--WRAPPER .actors_search_header_content--CONTAINER .mostPopularActors--BTN:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.actors_search--BLOCK hr {
+  width: 60rem;
+  margin: 5rem auto;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.actors_search--BLOCK .error_modal--EL .error_content_block--EL {
+  text-align: center;
+  color: #eee;
+  font-size: 2rem;
+  font-weight: 500;
+}
+/*# sourceMappingURL=actors.module.css.map */

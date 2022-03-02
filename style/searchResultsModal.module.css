@@ -1,0 +1,49 @@
+.searchResults--CONTAINER {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (calc(13rem + (170 - 130) * ((100vw - 400px) / (1400 - 400))))[auto-fit];
+      grid-template-columns: repeat(auto-fit, calc(13rem + (170 - 130) * ((100vw - 400px) / (1400 - 400))));
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 2rem;
+}
+
+.searchResults--CONTAINER .searchResult_card--EL {
+  width: 100%;
+}
+
+.searchResults--CONTAINER .searchResult_card--EL .searchResult_image--WRAPPER {
+  width: 100%;
+  aspect-ratio: 0.66;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.searchResults--CONTAINER .searchResult_card--EL .searchResult_image--WRAPPER img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.searchResults--CONTAINER .searchResult_card--EL .searchResult_mini_details--CONTAINER {
+  margin-top: 1rem;
+  color: #eee;
+}
+
+.searchResults--CONTAINER .searchResult_card--EL .searchResult_mini_details--CONTAINER .searchResult_name--EL {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.searchResults--CONTAINER .searchResult_card--EL .searchResult_mini_details--CONTAINER .searchResult_extra_mini_details--EL {
+  color: #ccc;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/*# sourceMappingURL=searchResultsModal.module.css.map */

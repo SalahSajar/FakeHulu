@@ -1,0 +1,128 @@
+.actor--BLOCK {
+  padding: 5rem 4rem;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK {
+  padding-bottom: 5rem;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 3.5rem;
+          column-gap: 3.5rem;
+}
+
+@media screen and (max-width: 650px) {
+  .actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    row-gap: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_poster--CONTAINER {
+  min-width: 25rem;
+  max-width: 25rem;
+  aspect-ratio: 0.66;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_poster--CONTAINER img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_infos_header--EL .actor_name--EL {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_infos_header--EL .actor_birth_infos--EL {
+  font-size: 1.2rem;
+  color: #dfd9d9;
+  text-transform: capitalize;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_info_header--EL {
+  font-size: 1.8rem;
+  color: #7fb7be;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.7rem;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_Biography--WRAPPER .actor_biography--EL {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: #eee;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_socialMedia--WRAPPER .actor_socialMedia_links--LIST {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+@media screen and (max-width: 650px) {
+  .actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_socialMedia--WRAPPER .actor_socialMedia_links--LIST {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_socialMedia--WRAPPER .actor_socialMedia_links--LIST a {
+  padding: 0.3rem;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_socialMedia--WRAPPER .actor_socialMedia_links--LIST a img {
+  width: 3rem;
+  -webkit-filter: invert(0.9);
+          filter: invert(0.9);
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_work--CONTAINER .actor_work--BLOCK:not(:last-of-type) {
+  margin-bottom: 5rem;
+}
+
+.actor--BLOCK .actor_content--CONTAINER .actor_work--CONTAINER .actor_work_header--EL {
+  font-size: 1.8rem;
+  color: #fff;
+  font-size: 500;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=actor.module.css.map */

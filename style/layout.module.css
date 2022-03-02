@@ -1,0 +1,16 @@
+.mainLayout--EL {
+  height: inherit;
+  padding: 7rem calc(1.5rem + (60 - 15) * ((100vw - 350px) / (1600 - 350)));
+}
+
+.secondaryLayout--EL {
+  padding: 7rem 1.5rem;
+  max-width: 90rem;
+  height: inherit;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+/*# sourceMappingURL=Layout.module.css.map */

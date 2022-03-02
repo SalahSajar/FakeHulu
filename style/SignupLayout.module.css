@@ -1,0 +1,54 @@
+.signupContent--CONTAINER {
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signupContent--CONTAINER .signupContentBlock--EL {
+  width: 65rem;
+}
+
+.signupContent--CONTAINER .signupContentBlock--EL.sm_layoutChild {
+  width: 60rem;
+}
+
+.signup_footer--EL {
+  padding: 3rem 0;
+  border-top: 1px solid rgba(102, 91, 91, 0.15);
+}
+
+.signup_footer--EL ul {
+  margin: 0 auto;
+  max-width: 100rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.signup_footer--EL ul li,
+.signup_footer--EL ul li > * {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.signup_footer--EL ul li a,
+.signup_footer--EL ul li > * a {
+  padding: 0.3rem 0.5rem;
+}
+/*# sourceMappingURL=SignupLayout.module.css.map */

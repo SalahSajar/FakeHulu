@@ -1,0 +1,555 @@
+.main_welcomePage--EL {
+  position: relative;
+}
+
+.welcome_header--EL {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#101dd1), to(#767cd5));
+  background: linear-gradient(#101dd1, #767cd5);
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER {
+  height: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.2))), url("../public/assets/welcomePage-assets/backgrouds/header.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../public/assets/welcomePage-assets/backgrouds/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 64px);
+  max-width: 55rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL {
+  width: 100%;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL .header-headline {
+  width: inherit;
+  margin: 1.7rem 0;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL .header-headline img {
+  width: inherit;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL .header-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL .header_ctas--WRAPPER button {
+  display: block;
+  color: #111;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 1.5rem auto;
+  padding: 1.5rem 3.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL .header_ctas--WRAPPER button:hover {
+  opacity: 0.75;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL .header_ctas--WRAPPER .SUBFEATURESandTERMS--CONTAINER {
+  color: #999;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL .header_ctas--WRAPPER .SUBFEATURESandTERMS--CONTAINER a {
+  color: #999;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.welcome_header--EL .welcome_header_content--WRAPPER .header_content--CONTAINER .header_content--EL .header_ctas--WRAPPER > a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.plansFeatures--SECTION {
+  background-color: #000;
+}
+
+.plansFeatures--SECTION .plansFeaturesSection_content--CONTAINER {
+  text-align: center;
+}
+
+.plansFeatures--SECTION .plansFeaturesSection_content--CONTAINER .plansFeaturesSection_typos--WRAPPER {
+  margin-bottom: 5rem;
+}
+
+.plansFeatures--SECTION .plansFeaturesSection_features--CONTAINER {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .plansFeatures--SECTION .plansFeaturesSection_features--CONTAINER {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+.plansFeatures--SECTION .plansFeaturesSection_features--CONTAINER .plansFeatureCard--EL {
+  position: relative;
+  width: 100%;
+  background-blend-mode: overlay;
+  aspect-ratio: 0.65;
+  border: none;
+  cursor: pointer;
+}
+
+.plansFeatures--SECTION .plansFeaturesSection_features--CONTAINER .plansFeatureCard--EL.premiums_FeatureCard::after {
+  content: "Premium network add-ons available for an additional cost";
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  color: #fff;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.plansFeatures--SECTION .plansFeaturesSection_features--CONTAINER .plansFeatureCard--EL .plansFeatureCard_typos--CONTAINER {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  text-align: left;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.plansFeatures--SECTION .plansFeaturesSection_features--CONTAINER .plansFeatureCard--EL .plansFeatureCard_typos--CONTAINER span {
+  font-size: 1.5rem;
+}
+
+.plansFeatures--SECTION .plansFeaturesSection_features--CONTAINER .plansFeatureCard--EL .plansFeatureCard_typos--CONTAINER h4 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.billboard--SECTION {
+  background-color: #151516;
+  text-align: center;
+}
+
+.billboard--SECTION .billboard_content_footer--WRAPPER .Billboard_disclaimer--EL {
+  color: #999;
+  line-height: 2.2;
+  margin: 1rem 0;
+}
+
+.billboard--SECTION .billboard_content_footer--WRAPPER .Billboard_disclaimer--EL a {
+  color: #999;
+  text-decoration: underline;
+}
+
+.billboard--SECTION .billboard_content_footer--WRAPPER .Billboard_modalLink--EL {
+  color: #bbb;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.billboard--SECTION .billboard_content_footer--WRAPPER .downScrollBtn--EL {
+  display: block;
+  width: 2rem;
+  margin: 2rem auto 0 auto;
+}
+
+.billboard--SECTION .billboard_content_footer--WRAPPER .downScrollBtn--EL img {
+  width: inherit;
+  -webkit-filter: invert(0.8);
+          filter: invert(0.8);
+  -webkit-animation: scroll-down 0.8s linear alternate infinite;
+          animation: scroll-down 0.8s linear alternate infinite;
+}
+
+@-webkit-keyframes scroll-down {
+  0% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+}
+
+.channels--SECTION {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+.channels--SECTION.liveSports_channel {
+  background: rgba(0, 0, 0, 0.3) url("/assets/welcomePage-assets/backgrouds/desktop-backgrounds/live-sports[desktop].jpg") center/cover;
+}
+
+.channels--SECTION.breakingNews_channel {
+  background: rgba(0, 0, 0, 0.3) url("/assets/welcomePage-assets/backgrouds/desktop-backgrounds/breaking-news[desktop].jpg") center/cover;
+}
+
+.channels--SECTION.biggestEvents_channel {
+  background: rgba(0, 0, 0, 0.3) url("/assets/welcomePage-assets/backgrouds/desktop-backgrounds/biggest-events[desktop].jpg") center/cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .channels--SECTION.liveSports_channel {
+    background: rgba(0, 0, 0, 0.3) url("/assets/welcomePage-assets/backgrouds/mobile-backgrounds/live-sports[mobile].jpg") center/cover;
+  }
+  .channels--SECTION.breakingNews_channel {
+    background: rgba(0, 0, 0, 0.3) url("/assets/welcomePage-assets/backgrouds/mobile-backgrounds/breaking-news[mobile].jpg") center/cover;
+  }
+  .channels--SECTION.biggestEvents_channel {
+    background: rgba(0, 0, 0, 0.3) url("/assets/welcomePage-assets/backgrouds/mobile-backgrounds/biggest-events[mobile].jpg") center/cover;
+  }
+}
+
+.channels--SECTION .channelsSection_content--CONTAINER {
+  max-width: 45rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+  .channels--SECTION .channelsSection_content--CONTAINER {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .channels--SECTION .channelsSection_content--CONTAINER .channelsTapLinks_Block--CONTAINER {
+    margin: 0 auto 6rem auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.channels--SECTION .channelsSection_content--CONTAINER .channelsTapLinks_Block--CONTAINER .channelsTapLinks--CONTAINER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+.channels--SECTION .channelsSection_content--CONTAINER .channelsTapLinks_Block--CONTAINER .channelsTapLinks--CONTAINER .channel_Tap_Link--EL {
+  color: rgba(153, 153, 153, 0.8);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.channels--SECTION .channelsSection_content--CONTAINER .channelsTapLinks_Block--CONTAINER .channelsTapLinks--CONTAINER .channel_Tap_Link--EL.activeTap {
+  color: #fff;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.channels--SECTION .channelsSection_content--CONTAINER .channelsTapLinks_Block--CONTAINER .channel_activeTap--EL {
+  position: relative;
+  margin-top: 1rem;
+  height: 0.4rem;
+}
+
+.channels--SECTION .channelsSection_content--CONTAINER .channelsTapLinks_Block--CONTAINER .channel_activeTap--EL .channel_activeTap_bar--EL {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_header--CONTAINER {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_header--CONTAINER h2 {
+  color: #151516;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_header--CONTAINER .huluPlans_description--EL {
+  color: #000;
+  font-weight: 400;
+  font-size: 1.9rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_header--CONTAINER .huluPlans_description--EL b {
+  display: block;
+  font-weight: 900;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table td,
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table th {
+  padding: 2.7rem 1.2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table td,
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table th {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr {
+  border-top: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "a a a" auto "b c d" auto / 1fr 1fr 1fr;
+  }
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:first-of-type {
+    grid-area: a;
+  }
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:nth-child(2) {
+    grid-area: b;
+  }
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:nth-child(3) {
+    grid-area: c;
+  }
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:nth-child(4) {
+    grid-area: d;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr:last-of-type {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead {
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER {
+  text-align: left;
+  max-width: 25rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_img--CONTAINER {
+  width: 80%;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_img--CONTAINER img {
+  width: inherit;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_typos--CONTAINER h3 {
+  margin: 0.5rem 0;
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: #151516;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_typos--CONTAINER h3 img {
+  width: 1.5rem;
+  opacity: 0.7;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_typos--CONTAINER p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL {
+  width: 17rem;
+  height: 12.7rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL {
+    background-color: #fff;
+    width: 100% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL {
+  height: inherit;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL {
+    font-size: 0.9rem;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .planPopularity--EL {
+  width: 90%;
+  padding: 0.5rem 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 30rem;
+  background-color: #67728a;
+  color: #fff;
+  margin: 0 auto 1rem auto;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_header_eyebrow--EL {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #aaa;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_header_eyebrow--EL {
+    font-size: 1.1rem;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_header_title--EL {
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: #151516;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_header_title--EL {
+    font-size: 1.6rem;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_cta_btn--EL {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1.4rem 0;
+  cursor: pointer;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tbody th {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tbody th {
+    text-align: center;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tbody td {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot td {
+  padding: 0;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot .table_disclaimer_content--WRAPPER {
+  padding: 2.7rem 1.2rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot .table_disclaimer_content--WRAPPER span {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot .table_disclaimer_content--WRAPPER span:not(:last-of-type) {
+  margin-bottom: 0.8rem;
+}
+/*# sourceMappingURL=Welcome.module.css.map */

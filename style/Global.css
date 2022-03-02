@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.f-center-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.f-start-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.f-center-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_title--EL {
+  color: #fff;
+  font-size: calc(3.5rem + (60 - 35) * ((100vw - 40rem) / (1600 - 400)));
+  font-weight: 900;
+  margin: 2rem 0;
+}
+
+.section_paragraph--EL {
+  max-width: 68rem;
+  color: #eee;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .section_paragraph--EL {
+    font-size: 1.5rem;
+  }
+}
+
+.section_eyebrow--EL {
+  color: #00ed82;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .section_eyebrow--EL {
+    font-size: 1rem;
+  }
+}
+
+.signUp_header--EL {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.signUp_header--EL h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #000;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.signUp_header--EL p {
+  font-size: 1.7rem;
+  color: #666;
+}
+
+.accountPage--BASE {
+  background-color: #062731;
+  min-height: 100vh;
+}
+/*# sourceMappingURL=Global.css.map */

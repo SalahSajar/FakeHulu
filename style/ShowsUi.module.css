@@ -1,0 +1,107 @@
+.shows--CONTAINER {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  overflow-x: scroll;
+  padding-bottom: 1rem;
+}
+
+.shows--CONTAINER::-webkit-scrollbar {
+  visibility: hidden;
+  height: 0.6rem;
+  border-radius: 30rem;
+}
+
+.shows--CONTAINER::-webkit-scrollbar-track {
+  background-color: #051e26;
+}
+
+.shows--CONTAINER::-webkit-scrollbar-thumb {
+  border-radius: 30rem;
+  background-color: #093846;
+}
+
+.shows--CONTAINER .movie_card--EL {
+  min-width: calc(13rem + (160 - 130) * ((100vw - 400px) / (1400 - 400)));
+  max-width: calc(13rem + (160 - 130) * ((100vw - 400px) / (1400 - 400)));
+}
+
+@media only screen and (min-width: 1800px) {
+  .shows--CONTAINER .movie_card--EL {
+    min-width: 28rem;
+    max-width: 28rem;
+  }
+}
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_img--WRAPPER {
+  aspect-ratio: 0.65;
+}
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_img--WRAPPER:hover img {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-box-shadow: 0 1rem 2rem -0.3rem rgba(0, 0, 0, 0.8);
+          box-shadow: 0 1rem 2rem -0.3rem rgba(0, 0, 0, 0.8);
+}
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_img--WRAPPER img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_details--CONTAINER {
+  margin-top: 1.3rem;
+}
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_details--CONTAINER .movie_title--EL {
+  color: #ddd;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+@media only screen and (min-width: 1800px) {
+  .shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_details--CONTAINER .movie_title--EL {
+    font-size: 2.7rem;
+  }
+}
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_extraDetails--CONTAINER {
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+@media only screen and (min-width: 1800px) {
+  .shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_extraDetails--CONTAINER {
+    font-size: 2rem;
+  }
+}
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_extraDetails--CONTAINER > * {
+  display: block;
+  padding: 0.1rem 0;
+}
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_extraDetails--CONTAINER .movie_genre--EL {
+  color: #aaa;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=ShowsUi.module.css.map */

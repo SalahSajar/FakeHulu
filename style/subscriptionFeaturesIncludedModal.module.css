@@ -1,0 +1,29 @@
+.modal_content_title--EL {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #151515;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.subscriptionFeatures_list--EL {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 3rem;
+}
+
+.subscriptionFeatures_list--EL li {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.subscriptionFeatures_list--EL li span {
+  margin-right: 0.5rem;
+}
+
+.subscriptionFeatures_list--EL li span img {
+  width: 1.7rem;
+}
+/*# sourceMappingURL=subscriptionFeaturesIncludedModal.module.css.map */

@@ -1,0 +1,85 @@
+.channel_content--CONTAINER {
+  color: #fff;
+  -webkit-animation: channel_content_animation 0.5s linear forwards;
+          animation: channel_content_animation 0.5s linear forwards;
+}
+
+@-webkit-keyframes channelcontentanimation {
+  from {
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes channelcontentanimation {
+  from {
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.channel_content--CONTAINER h3 {
+  margin: 2rem 0;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.channel_content--CONTAINER .channelTap_subheadline--EL {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.channel_content--CONTAINER .channelTap_logosRow--EL {
+  padding: 2.5rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (5rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 5rem);
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .channel_content--CONTAINER .channelTap_logosRow--EL {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.channel_content--CONTAINER .channelTap_logosRow--EL .channelTap_logo--EL {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.channel_content--CONTAINER .channelTap_logosRow--EL .channelTap_logo--EL img {
+  width: 100%;
+}
+
+.channel_content--CONTAINER .channelTap_disclaimer--EL {
+  color: #ddd;
+}
+
+.channel_content--CONTAINER .channelTap_disclaimer--EL a {
+  text-decoration: underline;
+  color: #ddd;
+}
+/*# sourceMappingURL=SpotlightTabs.module.css.map */

@@ -1,0 +1,18 @@
+.livetvDisclaimer_content--CONTAINER p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #222;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 500px) {
+  .livetvDisclaimer_content--CONTAINER p {
+    font-size: 1.3rem;
+  }
+}
+
+.livetvDisclaimer_content--CONTAINER p a,
+.livetvDisclaimer_content--CONTAINER p a:active {
+  color: #0000ee;
+}
+/*# sourceMappingURL=livetvDislaimerModal.module.css.map */

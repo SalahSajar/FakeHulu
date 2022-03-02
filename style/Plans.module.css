@@ -1,0 +1,181 @@
+.signupPlans_main--EL {
+  background-color: #def;
+  text-align: center;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .plansBlock_header--EL {
+  margin-bottom: 5rem;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .plansBlock_header--EL .plansCategories--CONTAINER {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .plansBlock_header--EL .plansCategories--CONTAINER a {
+  position: relative;
+  text-transform: uppercase;
+  color: #999;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-bottom: 1px solid #999;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .plansBlock_header--EL .plansCategories--CONTAINER a[data-activeplans="true"] {
+  color: #272c35;
+  pointer-events: none;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .plansBlock_header--EL .plansCategories--CONTAINER a[data-activeplans="true"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #272c35;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL {
+  margin-bottom: 3rem;
+  padding: 3rem 0;
+  border-top: 4px solid #29a869;
+  -webkit-box-shadow: 0 1rem 2rem -1.5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1rem 2rem -1.5rem rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL.mostPopularPlan::before {
+  content: "most popular";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0.7rem 1.7rem;
+  border-radius: 30rem;
+  background-color: #29a869;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL:not(:last-of-type) {
+  border-right: 2px solid #def;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL .planGroup_item_Title--EL {
+  color: #272c35;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL .planGroup_item_SpecialOffer--EL {
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #29a869;
+  text-transform: capitalize;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL .planGroup_item_Logo--CONTAINER {
+  margin: 2rem 0;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL .planGroup_item_Price--EL {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #272c35;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL .planGroup_item_DetailsPragraph--EL {
+  margin: 2rem 0;
+  color: #555;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL .selectPlan--BTN {
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: #272c35;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .planGroup--EL .planGroup_items--CONTAINER .planGroup_item--EL .learnMore--BTN {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #176ee1;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .plansDisclaimer--EL {
+  display: block;
+  color: #222;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #272c35;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .plansDisclaimer--EL .plansDisclaimerInfo--BTN {
+  position: relative;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  border: 1px solid #848fa4;
+  outline: none;
+  background-color: #fff;
+  width: 1.2rem;
+  aspect-ratio: 1/1;
+  vertical-align: text-top;
+  cursor: pointer;
+}
+
+.signupPlans_main--EL .plansDetailsBlock--EL .plansDisclaimer--EL .plansDisclaimerInfo--BTN::before {
+  content: "i";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.signupPlans_main--EL .studentDiscount--BTN {
+  color: #3f51b5;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 7rem 0;
+}
+/*# sourceMappingURL=Plans.module.css.map */
