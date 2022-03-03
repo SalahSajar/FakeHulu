@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useFetchDetails } from "../../../../lib/customHooks/useFetchDetails";
 import { useWatchlist } from "../../../../lib/customHooks/useWatchlist";
 
-import AccountLayout from "../../../../components/Layout/accountLayout";
+import AccountLayout from "../../../../components/Layout/AccountLayout";
 import ShowDetailsUi from "../../../../components/Ui/ShowDetailsUi";
 
 import TrailerModal from "../../../../components/Ui/AccountModals/TrailerModal";

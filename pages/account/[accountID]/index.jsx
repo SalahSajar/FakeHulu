@@ -10,7 +10,7 @@ import { GenresContext } from "../../../lib/genresContext";
 // Custom Components
 import ShowsUi from "../../../components/Ui/ShowsUi";
 import LoadingModal from "../../../components/Ui/AccountModals/LoadingModal";
-import AccountLayout from "../../../components/Layout/accountLayout";
+import AccountLayout from "../../../components/Layout/AccountLayout";
 
 import classes from "../../../style/home.module.css";
 

@@ -5,7 +5,7 @@ import { useUserAuth } from "../../lib/customHooks/useUserAuth";
 
 import Navbar from "../Ui/Navbar";
 
-import classes from "../../style/AccountLayout.module.css";
+import classes from "../../style/accountLayout.module.css";
 
 const AccountLayout = ({ children, accountPage, showNavbar }) => {
   const { accountID } = useRouter().query;
