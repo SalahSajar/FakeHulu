@@ -1,5 +1,6 @@
 import { Fragment, useState, useContext } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import ReCAPTCHA from "react-google-recaptcha";
 import md5 from "md5";
@@ -82,7 +83,7 @@ const LoginModal = ({ usersAccounts }) => {
         </button>
       </form>
       <span className={classes["signUp_directioning--EL"]}>
-        Don't have an account? <a href="#">Start your free trial</a>
+        Don't have an account? <Link href="/signup">Sign up for Hulu.</Link>
       </span>
     </Fragment>
   );
