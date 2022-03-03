@@ -34,11 +34,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/account/[accountID]/watchlist.js"
-    ],
-    "/welcome": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/welcome.js"
     ]
   },
   "ampFirstPages": []
