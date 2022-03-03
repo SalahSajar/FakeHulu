@@ -1,19 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/account/[accountID]/actors/[actorID]": "pages/account/[accountID]/actors/[actorID].html",
-  "/account/[accountID]/actors": "pages/account/[accountID]/actors.html",
-  "/account/[accountID]": "pages/account/[accountID].html",
-  "/account/[accountID]/movies/[movieID]": "pages/account/[accountID]/movies/[movieID].html",
-  "/account/[accountID]/movies": "pages/account/[accountID]/movies.html",
-  "/account/[accountID]/tvShows/[tvShowID]": "pages/account/[accountID]/tvShows/[tvShowID].html",
-  "/account/[accountID]/tvShows": "pages/account/[accountID]/tvShows.html",
-  "/account/[accountID]/watchlist": "pages/account/[accountID]/watchlist.html",
-  "/": "pages/index.html",
-  "/signup/account": "pages/signup/account.html",
-  "/signup": "pages/signup.html",
-  "/signup/plans": "pages/signup/plans.html",
-  "/welcome": "pages/welcome.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js",
+  "/welcome": "pages/welcome.js"
 }
