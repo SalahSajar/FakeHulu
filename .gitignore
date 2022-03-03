@@ -1,6 +1,9 @@
 /node_modules
 /styles
+/.next
 
 #.env files
 .env
 .env.local
+sshKey
+sshKey.pub
