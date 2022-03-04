@@ -64,11 +64,6 @@ export default function Welcome({ users }) {
     <Fragment>
       <Head>
         <title>Stream TV and movies Live and Online | Hulu</title>
-        <script
-          src="https://www.google.com/recaptcha/api.js"
-          async
-          defer
-        ></script>
       </Head>
       <main className={`${classes["main_welcomePage--EL"]}`}>
         {!!modalContent && displayModal && (

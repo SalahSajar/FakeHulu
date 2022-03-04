@@ -14,17 +14,13 @@ const LoginModal = ({ usersAccounts }) => {
   const { loginHandler } = useContext(UserAuthContext);
   const router = useRouter();
 
-  const [recaptchaValue, setRecaptchaValue] = useState(null);
-
-  const verifyCallback = (value) => setRecaptchaValue(value);
-
   const submitLoginFormHandler = (e) => {
     e.preventDefault();
 
     const loginEmail = e.target.email.value;
     const loginPassword = e.target.password.value;
 
-    if (loginEmail && loginPassword && recaptchaValue) {
+    if (loginEmail && loginPassword) {
       const accountFounded = usersAccounts.find(
         (userAccount) =>
           userAccount.email === loginEmail &&
@@ -72,12 +68,6 @@ const LoginModal = ({ usersAccounts }) => {
         <a href="#" className={classes["findEmailOrPassword_btn--EL"]}>
           Forgot your email or password?
         </a>
-        <div className={classes["recaptch_block--CONTAINER"]}>
-          <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY}
-            onChange={verifyCallback}
-          />
-        </div>
         <button type="submit" className={classes["login_btn--EL"]}>
           LOG IN
         </button>
