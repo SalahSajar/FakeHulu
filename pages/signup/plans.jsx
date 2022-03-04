@@ -33,6 +33,10 @@ const Plans = () => {
     router.push("/signup/account");
   };
 
+  useEffect(() => {
+    document.querySelector("body").style.overflowY = "scroll";
+  }, []);
+
   return (
     <Fragment>
       <main className={classes["signupPlans_main--EL"]}>

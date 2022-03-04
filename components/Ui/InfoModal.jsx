@@ -16,6 +16,7 @@ const InfoModal = ({ children, infos }) => {
         {children}
         <div data-expanded={false} className={classes["moreInfos_btn--EL"]}>
           <button
+            type="button"
             onClick={toggleMoreInfosBlockHandler}
             className={classes["infoModal--BTN"]}
           >
