@@ -12,7 +12,6 @@ import classes from "../../../style/LoginModal.module.css";
 const LoginModal = ({ usersAccounts }) => {
   const [loginError, setLoginError] = useState(false);
   const { loginHandler } = useContext(UserAuthContext);
-  const router = useRouter();
 
   const [recaptchaValue, setRecaptchaValue] = useState(null);
 
@@ -86,7 +85,8 @@ const LoginModal = ({ usersAccounts }) => {
         </button>
       </form>
       <span className={classes["signUp_directioning--EL"]}>
-        Don't have an account? <Link href="/signup">Sign up for Hulu.</Link>
+        Don't have an account?{" "}
+        <Link href="/signup/plans">Sign up for Hulu.</Link>
       </span>
     </Fragment>
   );

@@ -113,7 +113,7 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
             </li>
             <li>
               <a
-                href="https://github.com"
+                href="https://github.com/SalahSajar/FakeHulu"
                 target="_blank"
                 className={`${classes["account_subpage_link--EL"]} ${classes["githubLink"]}`}
               >
