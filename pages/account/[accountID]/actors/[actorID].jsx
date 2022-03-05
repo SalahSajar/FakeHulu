@@ -60,9 +60,11 @@ const Actor = () => {
                       <img
                         src={
                           !actorDetails.profile_path
-                            ? `assets/accountPage-assets/default_images/default-${
-                                actorDetails.gender === 1 ? "female" : "male"
-                              }-avatar.jpg`
+                            ? `${
+                                actorDetails.gender === 1
+                                  ? "/assets/accountPage-assets/default_images/default-female-avatar.jpg"
+                                  : "/assets/accountPage-assets/default_images/default-male-avatar.jpg"
+                              }`
                             : `https://www.themoviedb.org/t/p/original${actorDetails.profile_path}`
                         }
                         alt="poster"

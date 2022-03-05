@@ -29,22 +29,45 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
 
   const addToWatchlistHandler = () => {
     const quickAuthCheck = quickUserAuthCheckHandler(accountID);
-    const { title, tagline, release_date, id, genres, poster_path } =
-      showDetails;
+    const {
+      title,
+      name,
+      tagline,
+      release_date,
+      first_air_date,
+      id,
+      genres,
+      poster_path,
+    } = showDetails;
 
     if (accountID && quickAuthCheck) {
-      storeShowToWatchlistDB___Handler(
-        accountID,
-        {
-          title,
-          tagline,
-          release_date,
-          id,
-          genres,
-          poster_path,
-        },
-        type
-      );
+      if (type === "movies") {
+        storeShowToWatchlistDB___Handler(
+          accountID,
+          {
+            title,
+            tagline,
+            release_date,
+            id,
+            genres,
+            poster_path,
+          },
+          type
+        );
+      } else {
+        storeShowToWatchlistDB___Handler(
+          accountID,
+          {
+            name,
+            tagline,
+            first_air_date,
+            id,
+            genres,
+            poster_path,
+          },
+          type
+        );
+      }
     }
   };
 
@@ -76,8 +99,8 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
             />
           ) : (
             <img
-              src="/assets/accountPage-assets/"
-              alt={`${type === "movies" ? "movie" : "tv Show"}`}
+              src="/assets/accountPage-assets/default_images/showPosterNotAvailable.png"
+              alt={`${showDetails.title || showDetails.name}'s poster`}
             />
           )}
         </div>
@@ -137,7 +160,7 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
             </div>
           )}
 
-          {showDetails.production_companies && (
+          {!!showDetails.production_companies.length && (
             <div className={classes["show_companies--CONTAINER"]}>
               <span
                 className={`${classes["show_detail_header--EL"]} ${classes["show_companies_header--EL"]}`}

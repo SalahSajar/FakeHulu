@@ -94,7 +94,14 @@ const Watchlist = () => {
               !!userWatchlistMovies && !!userWatchlistMovies.length ? (
                 <div className={classes["watchlist_shows_content--CONTAINER"]}>
                   {userWatchlistMovies.map(
-                    ({ id, title, tagline, genres, poster_path }) => {
+                    ({
+                      id,
+                      title,
+                      tagline,
+                      genres,
+                      poster_path,
+                      release_date,
+                    }) => {
                       return (
                         <div
                           key={id}
@@ -140,7 +147,9 @@ const Watchlist = () => {
                                   classes["watchlist_show_categoties--EL"]
                                 }
                               >
-                                {tagline || genresReformationHandler(genres)}
+                                {!!genres
+                                  ? genresReformationHandler(genres)
+                                  : tagline || release_date}
                               </span>
                             </div>
                             <button
@@ -176,7 +185,14 @@ const Watchlist = () => {
             ) : !!userWatchlistTvShows && !!userWatchlistTvShows.length ? (
               <div className={classes["watchlist_shows_content--CONTAINER"]}>
                 {userWatchlistTvShows.map(
-                  ({ id, name, tagline, genres, poster_path }) => {
+                  ({
+                    id,
+                    name,
+                    tagline,
+                    genres,
+                    poster_path,
+                    first_air_date,
+                  }) => {
                     return (
                       <div
                         key={id}
@@ -220,7 +236,9 @@ const Watchlist = () => {
                                 classes["watchlist_show_categoties--EL"]
                               }
                             >
-                              {tagline || genresReformationHandler(genres)}
+                              {!!genres
+                                ? genresReformationHandler(genres)
+                                : tagline || first_air_date}
                             </span>
                           </div>
                           <button
