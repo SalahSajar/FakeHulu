@@ -112,7 +112,7 @@ export default function Welcome({ users }) {
                     </a>{" "}
                     See <Link href="/terms">Bundle terms</Link>.
                   </span>
-                  <Link href="/signup">Sign up for Hulu only</Link>
+                  <Link href="/signup/plans">Sign up for Hulu only</Link>
                 </div>
               </div>
             </div>
