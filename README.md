@@ -8,7 +8,7 @@
 
 ###### In FakeHulu you can sign up to explore the movies and tv Shows (***Don's use email or password you may regret losing***)
 
-![This is an image](https://github.com/SalahSajar/FakeHulu/blob/main/public/FakeHulu%20Screenshots/FakeHulu_welcome_page.png)
+![This is an image](https://github.com/SalahSajar/FakeHulu/blob/main/public/FakeHulu%20Screenshots/FakeHulu_user_main_page.png)
 
 ###### You can also view Movies and Tv Shows Details and Recommendations
 
