@@ -58,7 +58,11 @@ self.addEventListener("install", evt => {
 });
 
 self.addEventListener("activate", evt => {
-    console.log("-------servise worker Activated!!");
+    evt.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(keys.filter(key => key !== FakeHulu_mainCache_key ).map(key => caches.delete(key)));
+        })
+    )
 
     self.clients.claim();
 });
