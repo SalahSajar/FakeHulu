@@ -1,7 +1,5 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useCallback } from "react";
 import { useRouter } from "next/router";
-
-import { auth } from "../../lib/configs/firebaseConfig";
 
 import { useUserAuth } from "../../lib/customHooks/useUserAuth";
 
@@ -11,8 +9,6 @@ import classes from "../../style/accountLayout.module.css";
 
 const AccountLayout = ({ children, accountPage, showNavbar }) => {
   const { accountID } = useRouter().query;
-
-  const { currentUser } = auth;
 
   const { userIsAuthenticated, checkUserAuthHandler } = useUserAuth();
 
@@ -25,11 +21,11 @@ const AccountLayout = ({ children, accountPage, showNavbar }) => {
       return;
     }
 
-    if (!!accountID && !!auth.currentUser) {
+    if (!!accountID) {
       checkUserAuthHandler(accountID);
       return;
     }
-  }, [accountID, currentUser]);
+  }, [accountID]);
 
   return (
     <Fragment>
