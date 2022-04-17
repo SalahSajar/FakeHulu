@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect, useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import { useRouter } from "next/router";
 
 import { useWatchlist } from "../../lib/customHooks/useWatchlist";
@@ -271,8 +271,8 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
                 {!userWatchlistTvShows ||
                 !userWatchlistTvShows.length ||
                 !userWatchlistTvShows.find(
-                  (userWatchlistMovie) =>
-                    userWatchlistMovie.id === showDetails.id
+                  (userWatchlistTvShow) =>
+                    userWatchlistTvShow.id === showDetails.id
                 ) ? (
                   <button
                     type="button"

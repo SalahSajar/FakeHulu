@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../styles/test.module.sass"
-    ],
-    "names": [],
-    "file": "test.module.css"
-}

@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect } from "react";
 import { useRouter } from "next/router";
 
+import { auth } from "../../lib/configs/firebaseConfig";
+
 import { useUserAuth } from "../../lib/customHooks/useUserAuth";
 
 import Navbar from "../Ui/Navbar";
@@ -10,11 +12,24 @@ import classes from "../../style/accountLayout.module.css";
 const AccountLayout = ({ children, accountPage, showNavbar }) => {
   const { accountID } = useRouter().query;
 
+  const { currentUser } = auth;
+
   const { userIsAuthenticated, checkUserAuthHandler } = useUserAuth();
 
   useEffect(() => {
-    if (!!accountID) checkUserAuthHandler(accountID);
-  }, [accountID]);
+    const sessionUserUid = sessionStorage.getItem("uid");
+    const sessionUserToken = sessionStorage.getItem("token");
+
+    if (sessionUserUid === "null" || sessionUserToken === "null") {
+      window.location.replace("/welcome");
+      return;
+    }
+
+    if (!!accountID && !!auth.currentUser) {
+      checkUserAuthHandler(accountID);
+      return;
+    }
+  }, [accountID, currentUser]);
 
   return (
     <Fragment>

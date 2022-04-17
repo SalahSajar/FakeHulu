@@ -1,7 +1,7 @@
 import { Fragment, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import classes from "../../style/Plans.module.css";
+import classes from "../../style/Signup_Plans.module.css";
 
 import Navbar from "../../components/Ui/Navbar";
 import SignupLayout from "../../components/Layout/SignupLayout";

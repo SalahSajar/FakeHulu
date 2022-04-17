@@ -1,0 +1,247 @@
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_header--CONTAINER {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_header--CONTAINER h2 {
+  color: #151516;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_header--CONTAINER .huluPlans_description--EL {
+  color: #000;
+  font-weight: 400;
+  font-size: 1.9rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_header--CONTAINER .huluPlans_description--EL b {
+  display: block;
+  font-weight: 900;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table td,
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table th {
+  padding: 2.7rem 1.2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table td,
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table th {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr {
+  border-top: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "a a a" auto "b c d" auto / 1fr 1fr 1fr;
+  }
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:first-of-type {
+    grid-area: a;
+  }
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:nth-child(2) {
+    grid-area: b;
+  }
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:nth-child(3) {
+    grid-area: c;
+  }
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:nth-child(4) {
+    grid-area: d;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr:last-of-type {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead {
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER {
+  text-align: left;
+  max-width: 25rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_img--CONTAINER {
+  width: 80%;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_img--CONTAINER img {
+  width: inherit;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_typos--CONTAINER h3 {
+  margin: 0.5rem 0;
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: #151516;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_typos--CONTAINER h3 img {
+  width: 1.5rem;
+  opacity: 0.7;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_rowStarter--EL .huluPlans_rowHeader--CONTAINER .huluPlans_rowHeader_typos--CONTAINER p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL {
+  width: 17rem;
+  height: 12.7rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL {
+    background-color: #fff;
+    width: 100% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL {
+  height: inherit;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL {
+    font-size: 0.9rem;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .planPopularity--EL {
+  width: 90%;
+  padding: 0.5rem 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 30rem;
+  background-color: #67728a;
+  color: #fff;
+  margin: 0 auto 1rem auto;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_header_eyebrow--EL {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #aaa;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_header_eyebrow--EL {
+    font-size: 1.1rem;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_header_title--EL {
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: #151516;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_header_title--EL {
+    font-size: 1.6rem;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table thead .huluPlan_tableColumn_header--EL .planHeader_layoutFixer--EL .plan_header--EL .plan_cta_btn--EL {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1.4rem 0;
+  cursor: pointer;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tbody th {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 800px) {
+  .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tbody th {
+    text-align: center;
+  }
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tbody td {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot td {
+  padding: 0;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot .table_disclaimer_content--WRAPPER {
+  padding: 2.7rem 1.2rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot .table_disclaimer_content--WRAPPER span {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tfoot .table_disclaimer_content--WRAPPER span:not(:last-of-type) {
+  margin-bottom: 0.8rem;
+}
+/*# sourceMappingURL=Welcome_Plans.module.css.map */

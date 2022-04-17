@@ -1,16 +1,16 @@
-import { Fragment, useState, useContext } from "react";
+import { Fragment, useState } from "react";
 import Link from "next/link";
 
-import ReCAPTCHA from "react-google-recaptcha";
-import md5 from "md5";
+import { auth } from "../../../lib/configs/firebaseConfig";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
-import { UserAuthContext } from "../../../lib/userAuthContext";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import classes from "../../../style/LoginModal.module.css";
 
-const LoginModal = ({ usersAccounts }) => {
+const LoginModal = () => {
   const [loginError, setLoginError] = useState(false);
-  const { loginHandler } = useContext(UserAuthContext);
+  const [loginErrorType, setLoginErrorType] = useState(null);
 
   const [recaptchaValue, setRecaptchaValue] = useState(null);
 
@@ -19,24 +19,32 @@ const LoginModal = ({ usersAccounts }) => {
   const submitLoginFormHandler = (e) => {
     e.preventDefault();
 
-    const loginEmail = e.target.email.value;
-    const loginPassword = e.target.password.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    if (loginEmail && loginPassword && recaptchaValue) {
-      const accountFounded = usersAccounts.find(
-        (userAccount) =>
-          userAccount.email === loginEmail &&
-          userAccount.password === md5(loginPassword)
-      );
+    if (email && password && recaptchaValue) {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((loginRes) => {
+          window.location.replace(`/account/${loginRes.user.uid}`);
+          document.querySelector("body").style.overflowY = "scroll";
 
-      if (accountFounded) {
-        loginHandler(accountFounded);
+          sessionStorage.setItem("uid", loginRes.user.uid);
+          sessionStorage.setItem("token", loginRes.user.accessToken);
 
-        window.location.replace(`/account/${accountFounded.id}`);
-        document.querySelector("body").style.overflowY = "scroll";
-      } else {
-        setLoginError(true);
-      }
+          setLoginError(false);
+          setLoginErrorType(null);
+        })
+        .catch((err) => {
+          console.log(err.message);
+          setLoginError(true);
+
+          err.message.includes("auth/user-not-found") &&
+            setLoginErrorType("userNotFound");
+          err.message.includes("auth/wrong-password") &&
+            setLoginErrorType("wrongPassword");
+          err.message.includes("auth/network-request-failed") &&
+            setLoginErrorType("failedRequest");
+        });
     }
   };
 
@@ -52,7 +60,15 @@ const LoginModal = ({ usersAccounts }) => {
             loginError && classes["loginErrorActivate"]
           }`}
         >
-          Email Or Password is Invalid
+          {!!loginErrorType &&
+            loginErrorType === "userNotFound" &&
+            "Error: User not Found"}
+          {!!loginErrorType &&
+            loginErrorType === "wrongPassword" &&
+            "Error: Password is Incorrect"}
+          {!!loginErrorType &&
+            loginErrorType === "failedRequest" &&
+            "Error: Something Went Wrong, Please try Again Later"}
         </span>
 
         <div className={classes["login_form--CONTAINER"]}>

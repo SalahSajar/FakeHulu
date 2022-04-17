@@ -2,8 +2,6 @@ import { useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import md5 from "md5";
-
 // custom Hooks
 import { useInput } from "../../lib/customHooks/useInput";
 import { useSignup } from "../../lib/customHooks/useSignup";
@@ -24,7 +22,7 @@ import SignupModal from "../../components/Ui/SignupModal";
 const Account = () => {
   const redirectRouter = useRouter();
 
-  const { signupHandler, error, isLoading, success } = useSignup();
+  const { signupHandler, error, errorType, isLoading, success } = useSignup();
 
   const { emailIsvalid, emailIsChanged, emailInputHandlerObj } = useInput();
   const { passwordIsvalid, passwordIsChanged, passwordInputHandlerObj } =
@@ -45,13 +43,6 @@ const Account = () => {
     passwordIsChanged &&
     birthdayIsChanged;
 
-  const uniqueIdGenerator_FUNC = () => {
-    const head = Date.now().toString(36);
-    const tail = Math.random().toString(36).substr(2);
-
-    return head + tail;
-  };
-
   const submitAccountForm__FUNC = (e) => {
     e.preventDefault();
 
@@ -65,13 +56,13 @@ const Account = () => {
         const { email, name, password, birthday, gender } = e.target;
 
         const accountInfosObj = {
-          id: uniqueIdGenerator_FUNC(),
           name: name.value,
           email: email.value,
-          password: md5(password.value),
+          password: password.value,
           birthday: birthday.value,
           gender: gender.value,
           plan: planSelected,
+          watchlist: { tvShows: [], movies: [] },
         };
 
         signupHandler(accountInfosObj);
@@ -93,17 +84,22 @@ const Account = () => {
 
   return (
     <main className={classes["signupAccount_main--EL"]}>
-      {isLoading ? (
-        <SignupModal signupState="loading" />
-      ) : (
-        error ||
-        (success && (
-          <SignupModal
-            signupState="signupMessage"
-            messageType={error ? "error" : "success"}
-          />
-        ))
+      {isLoading && <SignupModal signupState="loading" />}
+      {error && (
+        <SignupModal
+          signupState="signupMessage"
+          messageType="error"
+          errorType={errorType}
+        />
       )}
+      {success && (
+        <SignupModal
+          signupState="signupMessage"
+          messageType="success"
+          errorType={errorType}
+        />
+      )}
+
       <Navbar page="signup" />
       <SignupLayout size="sm_layout">
         <div className="signUp_header--EL">

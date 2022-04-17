@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../styles/text.module.scss"
-    ],
-    "names": [],
-    "file": "text.module.css"
-}

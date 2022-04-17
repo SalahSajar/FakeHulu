@@ -352,7 +352,7 @@
   .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr {
     display: -ms-grid;
     display: grid;
-    grid-template: "a a a" auto "b c d" auto / 1fr 1fr 1fr;
+    grid-template: "a a a" auto "b c d" auto / 1fr 1fr 1fr;
   }
   .hulupPlans--SECTION .huluPlans_content--CONTAINER .huluPlans_table--WRAPPER table tr *:first-of-type {
     grid-area: a;
