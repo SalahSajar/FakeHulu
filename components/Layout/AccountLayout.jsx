@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useCallback } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { useUserAuth } from "../../lib/customHooks/useUserAuth";
