@@ -1,6 +1,9 @@
 import React, { Fragment, useEffect } from "react";
 import { useRouter } from "next/router";
 
+import { auth } from "../../lib/configs/firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
+
 import { useUserAuth } from "../../lib/customHooks/useUserAuth";
 
 import Navbar from "../Ui/Navbar";
@@ -13,17 +16,21 @@ const AccountLayout = ({ children, accountPage, showNavbar }) => {
   const { userIsAuthenticated, checkUserAuthHandler } = useUserAuth();
 
   useEffect(() => {
-    const sessionUserUid = sessionStorage.getItem("uid");
-    const sessionUserToken = sessionStorage.getItem("token");
-
-    if (sessionUserUid === "null" || sessionUserToken === "null") {
-      window.location.replace("/welcome");
-      return;
-    }
-
     if (!!accountID) {
-      checkUserAuthHandler(accountID);
-      return;
+      onAuthStateChanged(auth, (user) => {
+        if (!!user) {
+          const localUserUid = localStorage.getItem("uid");
+          const localUserToken = localStorage.getItem("token");
+
+          if (localUserUid === "null") localStorage.setItem("uid", user.uid);
+          if (localUserToken === "null")
+            localStorage.setItem("token", user.accessToken);
+
+          checkUserAuthHandler(accountID, user.uid);
+        } else {
+          window.location.replace("/welcome");
+        }
+      });
     }
   }, [accountID]);
 

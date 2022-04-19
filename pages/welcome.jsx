@@ -48,8 +48,8 @@ export default function Welcome({ users }) {
 
   const logoutHandler = () => {
     signOut(auth);
-    sessionStorage.setItem("uid", null);
-    sessionStorage.setItem("token", null);
+    localStorage.setItem("uid", null);
+    localStorage.setItem("token", null);
   };
 
   useEffect(() => {
@@ -331,22 +331,4 @@ export default function Welcome({ users }) {
       </main>
     </Fragment>
   );
-}
-
-export async function getStaticProps() {
-  const req = await fetch(
-    "https://fakehulu-default-rtdb.europe-west1.firebasedatabase.app/FakeHuluUsers.json"
-  );
-  const data = await req.json();
-  let users = [];
-
-  for (const id in data) {
-    users.push(data[id]);
-  }
-
-  return {
-    props: {
-      users,
-    },
-  };
 }

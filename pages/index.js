@@ -1,24 +1,26 @@
 import {useEffect} from "react";
 
 import {auth} from "../lib/configs/firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
 
 import LoadingModal from "../components/Ui/AccountModals/LoadingModal";
 
 export default function Home() {
 
   useEffect(() => {
-    const currentUserUid = auth.currentUser?.uid;
-    const currentUserToken = auth.currentUser?.accessToken;
+    onAuthStateChanged(auth , user => {
+      if(!!user){
+        const localUserUid = localStorage.getItem("uid");
+        const localUserToken = localStorage.getItem("token");
 
-    if(!!auth.currentUser){
-      sessionStorage.setItem("uid", currentUserUid);
-      sessionStorage.setItem("token", currentUserToken);
+        if (localUserUid === "null") localStorage.setItem("uid", user.uid);
+        if (localUserToken === "null") localStorage.setItem("token", user.accessToken);
 
-      window.location.replace(`/account/${currentUserUid}`);
-    } else {
-      window.location.replace(`/welcome`);
-    }
-
+        window.location.replace(`/account/${user.uid}`);
+      } else {
+        window.location.replace(`/welcome`);
+      }
+    });
   }, []);
   return (
     <div style={{height: "100vh"}}>

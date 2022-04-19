@@ -28,8 +28,8 @@ const LoginModal = () => {
           window.location.replace(`/account/${loginRes.user.uid}`);
           document.querySelector("body").style.overflowY = "scroll";
 
-          sessionStorage.setItem("uid", loginRes.user.uid);
-          sessionStorage.setItem("token", loginRes.user.accessToken);
+          localStorage.setItem("uid", loginRes.user.uid);
+          localStorage.setItem("token", loginRes.user.accessToken);
 
           setLoginError(false);
           setLoginErrorType(null);
