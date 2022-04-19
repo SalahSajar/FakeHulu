@@ -1,6 +1,9 @@
 import React, { Fragment, useContext } from "react";
 import { useRouter } from "next/router";
 
+import { auth } from "../../lib/configs/firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
+
 import { useWatchlist } from "../../lib/customHooks/useWatchlist";
 import { useUserAuth } from "../../lib/customHooks/useUserAuth";
 
@@ -40,34 +43,40 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
       poster_path,
     } = showDetails;
 
-    if (accountID && quickAuthCheck) {
-      if (type === "movies") {
-        storeShowToWatchlistDB___Handler(
-          accountID,
-          {
-            title,
-            tagline,
-            release_date,
-            id,
-            genres,
-            poster_path,
-          },
-          type
-        );
-      } else {
-        storeShowToWatchlistDB___Handler(
-          accountID,
-          {
-            name,
-            tagline,
-            first_air_date,
-            id,
-            genres,
-            poster_path,
-          },
-          type
-        );
-      }
+    if (!!accountID) {
+      onAuthStateChanged(auth, (user) => {
+        if (!!user) {
+          if (type === "movies") {
+            storeShowToWatchlistDB___Handler(
+              accountID,
+              {
+                title,
+                tagline,
+                release_date,
+                id,
+                genres,
+                poster_path,
+              },
+              type
+            );
+          } else {
+            storeShowToWatchlistDB___Handler(
+              accountID,
+              {
+                name,
+                tagline,
+                first_air_date,
+                id,
+                genres,
+                poster_path,
+              },
+              type
+            );
+          }
+        } else {
+          window.location.replace("/welcome");
+        }
+      });
     }
   };
 
