@@ -38,6 +38,7 @@
     padding-bottom: 2rem;
   }
   .welcomePage_footer--EL .welcomePage_footer_content--CONTAINER .footer_contentColumn--CONTAINER:not(:last-of-type) {
+    padding-bottom: 0;
     border-bottom: 1px solid rgba(134, 113, 177, 0.527);
   }
 }
@@ -127,7 +128,7 @@
 }
 
 .welcomePage_footer--EL hr {
-  margin: 4rem 0;
+  margin: 2.5rem 0;
   border: none;
   border-bottom: 1px solid rgba(106, 73, 172, 0.2);
 }

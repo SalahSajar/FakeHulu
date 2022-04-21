@@ -64,6 +64,57 @@ export default function Welcome({ users }) {
     logoutHandler();
   }, []);
 
+  useEffect(() => {
+    const mobileMediaScreen = window.matchMedia("(max-width:450px)").matches;
+
+    const extraGap = mobileMediaScreen ? 15 : 30;
+
+    // White Underline Element
+    const category_underline__EL = document.querySelector(
+      `.${classes["channel_activeTap--EL"]} span`
+    );
+
+    // Channels Tap Link elements
+    const liveSport_TapLink__EL = document.querySelector(
+      `.${classes["channel_Tap_Link--EL"]}:nth-child(1)`
+    );
+    const breakingNews_TapLink__EL = document.querySelector(
+      `.${classes["channel_Tap_Link--EL"]}:nth-child(2)`
+    );
+    const biggestEvents_TapLink__EL = document.querySelector(
+      `.${classes["channel_Tap_Link--EL"]}:nth-child(3)`
+    );
+    //////////////////////////////////////
+
+    // Channels Link Details
+    const liveSport_TapLink__Details =
+      liveSport_TapLink__EL.getBoundingClientRect();
+    const breakingNews_TapLink__Details =
+      breakingNews_TapLink__EL.getBoundingClientRect();
+    const biggestEvents_TapLink__Details =
+      biggestEvents_TapLink__EL.getBoundingClientRect();
+    //////////////////////////////////////
+
+    if (activeChannelsCategory === 0) {
+      category_underline__EL.style.width = `${liveSport_TapLink__Details.width}px`;
+      category_underline__EL.style.transform = `translateX(0)`;
+    }
+    if (activeChannelsCategory === 1) {
+      category_underline__EL.style.width = `${breakingNews_TapLink__Details.width}px`;
+      category_underline__EL.style.transform = `translateX(${
+        extraGap + liveSport_TapLink__Details.width
+      }px)`;
+    }
+    if (activeChannelsCategory === 2) {
+      category_underline__EL.style.width = `${biggestEvents_TapLink__Details.width}px`;
+      category_underline__EL.style.transform = `translateX(${
+        extraGap * 2 +
+        liveSport_TapLink__Details.width +
+        breakingNews_TapLink__Details.width
+      }px)`;
+    }
+  }, [activeChannelsCategory]);
+
   return (
     <Fragment>
       <Head>
@@ -295,25 +346,7 @@ export default function Welcome({ users }) {
                   </a>
                 </div>
                 <div className={classes["channel_activeTap--EL"]}>
-                  <span
-                    style={{
-                      width: `${
-                        !activeChannelsCategory
-                          ? "86px"
-                          : activeChannelsCategory === 1
-                          ? "110px"
-                          : "112px"
-                      }`,
-                      transform: `translateX(${
-                        !activeChannelsCategory
-                          ? "0px"
-                          : activeChannelsCategory === 1
-                          ? "116px"
-                          : "256px"
-                      })`,
-                    }}
-                    className={classes["channel_activeTap_bar--EL"]}
-                  ></span>
+                  <span className={classes["channel_activeTap_bar--EL"]}></span>
                 </div>
               </div>
 

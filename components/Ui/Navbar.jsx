@@ -135,9 +135,20 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
             !!page && classes["signupPage_navbar--EL"]
           }`}
         >
-          <h1 role="heading" className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
-            <img src={navbarLogoPath} alt="hulu logo" />
-          </h1>
+          {page === "signup" ? (
+            <Link href="/welcome">
+              <a className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
+                <img src={navbarLogoPath} alt="hulu logo" />
+              </a>
+            </Link>
+          ) : (
+            <h1
+              role="heading"
+              className={`${classes["hulu_nav_logo--WRAPPER"]}`}
+            >
+              <img src={navbarLogoPath} alt="hulu logo" />
+            </h1>
+          )}
 
           {!page && (
             <a

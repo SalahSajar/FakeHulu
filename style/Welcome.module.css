@@ -277,6 +277,13 @@
           column-gap: 3rem;
 }
 
+@media only screen and (max-width: 450px) {
+  .channels--SECTION .channelsSection_content--CONTAINER .channelsTapLinks_Block--CONTAINER .channelsTapLinks--CONTAINER {
+    -webkit-column-gap: 1.5rem;
+            column-gap: 1.5rem;
+  }
+}
+
 .channels--SECTION .channelsSection_content--CONTAINER .channelsTapLinks_Block--CONTAINER .channelsTapLinks--CONTAINER .channel_Tap_Link--EL {
   color: rgba(153, 153, 153, 0.8);
   text-transform: uppercase;
