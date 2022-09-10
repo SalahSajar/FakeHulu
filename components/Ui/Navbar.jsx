@@ -152,7 +152,7 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
 
           {!page && (
             <a
-              href="#"
+              href="javascript:void(0)"
               onClick={(e) => changeModalStateHandler(e, "logIn", true)}
             >
               log in

@@ -154,7 +154,7 @@ export default function Welcome({ users }) {
                   <button type="button">get the disney bundle</button>
                   <span className={classes["SUBFEATURESandTERMS--CONTAINER"]}>
                     <a
-                      href="#"
+                      href="javascript:void(0)"
                       onClick={(e) =>
                         changeModalState__FUNC(
                           e,
@@ -165,7 +165,7 @@ export default function Welcome({ users }) {
                     >
                       What's includes
                     </a>{" "}
-                    See <Link href="/terms">Bundle terms</Link>.
+                    See <Link href="javascript:void(0)">Bundle terms</Link>.
                   </span>
                   <Link href="/signup/plans">Sign up for Hulu only</Link>
                 </div>
@@ -287,7 +287,7 @@ export default function Welcome({ users }) {
                   content. Offer valid for eligible subscribers only.{" "}
                 </span>
                 <a
-                  href="/"
+                  href="javascript:void(0)"
                   onClick={(e) =>
                     changeModalState__FUNC(e, "channelsAreaSearcher", true)
                   }
@@ -324,21 +324,21 @@ export default function Welcome({ users }) {
               <div className={classes["channelsTapLinks_Block--CONTAINER"]}>
                 <div className={classes["channelsTapLinks--CONTAINER"]}>
                   <a
-                    href="#"
+                    href="javascript:void(0)"
                     className={`${classes["channel_Tap_Link--EL"]} ${classes["activeTap"]}`}
                     onClick={(e) => changeChannelsCategory__FUNC(e, 0)}
                   >
                     live sports
                   </a>
                   <a
-                    href="#"
+                    href="javascript:void(0)"
                     className={`${classes["channel_Tap_Link--EL"]}`}
                     onClick={(e) => changeChannelsCategory__FUNC(e, 1)}
                   >
                     breaking news
                   </a>
                   <a
-                    href="#"
+                    href="javascript:void(0)"
                     className={`${classes["channel_Tap_Link--EL"]}`}
                     onClick={(e) => changeChannelsCategory__FUNC(e, 2)}
                   >
