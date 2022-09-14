@@ -53,7 +53,7 @@ const TvShow = () => {
         )}
       </Head>
       <AccountLayout showNavbar={false}>
-        <div className={classes["tvShow_details--BLOCK"]}>
+        <main className={classes["tvShow_details--BLOCK"]}>
           {/* Trailer Modal */}
           {showTrailerDetails && (
             <TrailerModal
@@ -109,18 +109,18 @@ const TvShow = () => {
             )}
           </section>
           {!isLoading && !error && !!simularShows.length ? (
-            <div className={classes["tvShow_recommendations--BLOCK"]}>
+            <section className={classes["tvShow_recommendations--BLOCK"]}>
               <h2 className={classes["tvShow_recommendations_title--EL"]}>
                 Recommendations
               </h2>
               {!!simularShows && (
                 <ShowsSlider type="tvShows" showsArr={simularShows} />
               )}
-            </div>
+            </section>
           ) : (
             ""
           )}
-        </div>
+        </main>
       </AccountLayout>
     </Fragment>
   );

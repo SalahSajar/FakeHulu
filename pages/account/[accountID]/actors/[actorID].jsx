@@ -51,12 +51,12 @@ const Actor = () => {
             </div>
           </div>
         ) : (
-          <div className={classes["actor--BLOCK"]}>
+          <main className={classes["actor--BLOCK"]}>
             {!!actorDetails && (
               <div className={classes["actor_content--CONTAINER"]}>
-                <div className={classes["actor_details--BLOCK"]}>
+                <section className={classes["actor_details--BLOCK"]}>
                   <div className={classes["actor_details_content--CONTAINER"]}>
-                    <aside className={classes["actor_poster--CONTAINER"]}>
+                    <div className={classes["actor_poster--CONTAINER"]}>
                       <img
                         src={
                           !actorDetails.profile_path
@@ -70,7 +70,7 @@ const Actor = () => {
                         alt="poster"
                         loading="eager"
                       />
-                    </aside>
+                    </div>
                     <div className={classes["actor_infos--CONTAINER"]}>
                       <div className={classes["actor_infos_header--EL"]}>
                         <h2 className={classes["actor_name--EL"]}>
@@ -170,44 +170,48 @@ const Actor = () => {
                       )}
                     </div>
                   </div>
-                </div>
+                </section>
 
                 <div className={classes["actor_work--CONTAINER"]}>
                   {actorMovies.length && (
-                    <div
+                    <article
                       className={`${classes["actor_work--BLOCK"]} ${classes["actor_movies--BLOCK"]}`}
                     >
                       <h3 className={classes["actor_work_header--EL"]}>
                         movies {actorDetails.name} was in:
                       </h3>
-                      <ShowsSlider
-                        showsArr={actorMovies.sort(
-                          (a, b) => b.popularity - a.popularity
-                        )}
-                        type="movies"
-                      />
-                    </div>
+                      <section>
+                        <ShowsSlider
+                          showsArr={actorMovies.sort(
+                            (a, b) => b.popularity - a.popularity
+                          )}
+                          type="movies"
+                        />
+                      </section>
+                    </article>
                   )}
 
                   {!!actorTvShows.length && (
-                    <div
+                    <article
                       className={`${classes["actor_work--BLOCK"]} ${classes["actor_tvShows--BLOCK"]}`}
                     >
                       <h3 className={classes["actor_work_header--EL"]}>
                         TV shows {actorDetails.name} was in:
                       </h3>
-                      <ShowsSlider
-                        showsArr={actorTvShows.sort(
-                          (a, b) => b.popularity - a.popularity
-                        )}
-                        type="tvShows"
-                      />
-                    </div>
+                      <section>
+                        <ShowsSlider
+                          showsArr={actorTvShows.sort(
+                            (a, b) => b.popularity - a.popularity
+                          )}
+                          type="tvShows"
+                        />
+                      </section>
+                    </article>
                   )}
                 </div>
               </div>
             )}
-          </div>
+          </main>
         )}
       </AccountLayout>
     </Fragment>

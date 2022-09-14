@@ -47,12 +47,9 @@ const account = () => {
           </div>
         ) : (
           !!accountHomePageShows && (
-            <section
-              id="movies--SECTION"
-              className={classes["movies--SECTION"]}
-            >
+            <main id="movies--SECTION" className={classes["movies--SECTION"]}>
               <div className={classes["shows_Highlighter--EL"]}>
-                <div className={classes["showsType--CONTAINER"]}>
+                <section className={classes["showsType--CONTAINER"]}>
                   <h4 className={classes["showsType_header--EL"]}>
                     trending movies
                   </h4>
@@ -61,9 +58,9 @@ const account = () => {
                     type="movies"
                     showsData={accountHomePageShows.trendingMovies.results}
                   />
-                </div>
+                </section>
 
-                <div className={classes["showsType--CONTAINER"]}>
+                <section className={classes["showsType--CONTAINER"]}>
                   <h4 className={classes["showsType_header--EL"]}>
                     trending tv shows
                   </h4>
@@ -72,8 +69,8 @@ const account = () => {
                     type="tvShows"
                     showsData={accountHomePageShows.trendingTvShows.results}
                   />
-                </div>
-                <div className={classes["showsType--CONTAINER"]}>
+                </section>
+                <section className={classes["showsType--CONTAINER"]}>
                   <h4 className={classes["showsType_header--EL"]}>
                     best Movies of 2021
                   </h4>
@@ -82,8 +79,8 @@ const account = () => {
                     type="movies"
                     showsData={accountHomePageShows.bestMoviesOf2021.results}
                   />
-                </div>
-                <div className={classes["showsType--CONTAINER"]}>
+                </section>
+                <section className={classes["showsType--CONTAINER"]}>
                   <h4 className={classes["showsType_header--EL"]}>
                     best TV Shows of 2021
                   </h4>
@@ -92,9 +89,9 @@ const account = () => {
                     type="tvShows"
                     showsData={accountHomePageShows.bestTvShowsOf2021.results}
                   />
-                </div>
+                </section>
               </div>
-            </section>
+            </main>
           )
         )}
       </AccountLayout>

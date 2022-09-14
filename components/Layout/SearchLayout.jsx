@@ -6,7 +6,7 @@ import AccountLayout from "./AccountLayout";
 
 import classes from "../../style/SearchLayout.module.css";
 
-const firstRenderBlocker = true;
+let firstRenderBlocker = true;
 
 const SearchLayout = ({ children, type, accountPage }) => {
   const [searchValue, setSearchValue] = useState("");
@@ -49,8 +49,8 @@ const SearchLayout = ({ children, type, accountPage }) => {
   return (
     <Fragment>
       <AccountLayout showNavbar={true} accountPage={accountPage}>
-        <div className={classes["search--BLOCK"]}>
-          <div className={classes["search_header--WRAPPER"]}>
+        <main className={classes["search--BLOCK"]}>
+          <header className={classes["search_header--WRAPPER"]}>
             <div className={classes["search_header_content--CONTAINER"]}>
               {type === "person" && <h2>Search for Your Favorite Actor</h2>}
               {type === "movie" && <h2>Search for Your Favorite Movie</h2>}
@@ -96,12 +96,12 @@ const SearchLayout = ({ children, type, accountPage }) => {
                 {type === "tv" && "trending TV Shows"}
               </button>
             </div>
-          </div>
+          </header>
 
           <hr />
 
           {children}
-        </div>
+        </main>
       </AccountLayout>
     </Fragment>
   );

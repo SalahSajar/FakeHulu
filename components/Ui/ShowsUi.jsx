@@ -54,7 +54,7 @@ const ShowsUi = ({ type, showsData }) => {
               genre_ids,
             }) => {
               return (
-                <div key={id} className={classes["movie_card--EL"]}>
+                <article key={id} className={classes["movie_card--EL"]}>
                   <div className={classes["movie_content--CONTAINER"]}>
                     <Link href={`${toShowPath}/movies/${id}`}>
                       <a className={classes["movie_img--WRAPPER"]}>
@@ -87,7 +87,7 @@ const ShowsUi = ({ type, showsData }) => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               );
             }
           )}
@@ -103,7 +103,7 @@ const ShowsUi = ({ type, showsData }) => {
               genre_ids,
             }) => {
               return (
-                <div key={id} className={classes["movie_card--EL"]}>
+                <article key={id} className={classes["movie_card--EL"]}>
                   <div className={classes["movie_content--CONTAINER"]}>
                     <Link href={`${toShowPath}/tvShows/${id}`}>
                       <a className={classes["movie_img--WRAPPER"]}>
@@ -136,7 +136,7 @@ const ShowsUi = ({ type, showsData }) => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               );
             }
           )}

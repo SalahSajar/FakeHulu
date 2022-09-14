@@ -72,9 +72,9 @@ const Plans = () => {
                           <span className={classes["planPopularity--EL"]}>
                             Most Popular
                           </span>
-                          <h5 className={classes["plan_header_eyebrow--EL"]}>
+                          <span className={classes["plan_header_eyebrow--EL"]}>
                             30 DAY FREE TRIAL
-                          </h5>
+                          </span>
                           <h4 className={classes["plan_header_title--EL"]}>
                             Hulu
                           </h4>
@@ -93,9 +93,9 @@ const Plans = () => {
                     >
                       <div className={classes["planHeader_layoutFixer--EL"]}>
                         <div className={classes["plan_header--EL"]}>
-                          <h5 className={classes["plan_header_eyebrow--EL"]}>
+                          <span className={classes["plan_header_eyebrow--EL"]}>
                             30 DAY FREE TRIAL
-                          </h5>
+                          </span>
                           <h4 className={classes["plan_header_title--EL"]}>
                             Hulu (No ads)
                           </h4>
@@ -114,9 +114,9 @@ const Plans = () => {
                     >
                       <div className={classes["planHeader_layoutFixer--EL"]}>
                         <div className={classes["plan_header--EL"]}>
-                          <h5 className={classes["plan_header_eyebrow--EL"]}>
+                          <span className={classes["plan_header_eyebrow--EL"]}>
                             DISNEY+, ESPN+
-                          </h5>
+                          </span>
                           <h4 className={classes["plan_header_title--EL"]}>
                             Hulu + Live TV
                           </h4>

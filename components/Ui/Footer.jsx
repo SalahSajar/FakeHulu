@@ -24,16 +24,16 @@ const Footer = () => {
             className={`${classes["footer_contentColumn--CONTAINER"]} ${classes["browseHuluNetworks_contentColumn--EL"]}`}
           >
             <h5 className={classes["footer_contentColumn_title--EL"]}>
-              BROWSE
+              browse
             </h5>
-            <h5
+            <span
               onClick={changeFooterContentColumnState__FUNC}
               role="button"
               aria-expanded="false"
               className={classes["footer_contentColumn_title--EL"]}
             >
-              BROWSE
-            </h5>
+              browse
+            </span>
             <div
               className={`f-start-between ${classes["footer_column_content--CONTAINER"]}`}
             >
@@ -100,14 +100,14 @@ const Footer = () => {
           </div>
           <div className={classes["footer_contentColumn--CONTAINER"]}>
             <h5 className={classes["footer_contentColumn_title--EL"]}>help</h5>
-            <h5
+            <span
               onClick={changeFooterContentColumnState__FUNC}
               role="button"
               aria-expanded="false"
               className={classes["footer_contentColumn_title--EL"]}
             >
               help
-            </h5>
+            </span>
             <div className={classes["footer_column_linksGrid--CONTAINER"]}>
               <ul className={classes["footer_column_contentColumn--CONTAINER"]}>
                 <li>
@@ -129,14 +129,14 @@ const Footer = () => {
             <h5 className={classes["footer_contentColumn_title--EL"]}>
               about us
             </h5>
-            <h5
+            <span
               onClick={changeFooterContentColumnState__FUNC}
               role="button"
               aria-expanded="false"
               className={classes["footer_contentColumn_title--EL"]}
             >
               about us
-            </h5>
+            </span>
             <div className={classes["footer_column_linksGrid--CONTAINER"]}>
               <ul className={classes["footer_column_contentColumn--CONTAINER"]}>
                 <li>
@@ -193,7 +193,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <nav className={classes["footer_final_navbar--EL"]}>
+        <div className={classes["footer_final_navbar--EL"]}>
           <ul className="f-center-between">
             <li>&#169; 2022 Hulu, LLC</li>
             <li>
@@ -218,7 +218,7 @@ const Footer = () => {
               <a href="#">sitemap</a>
             </li>
           </ul>
-        </nav>
+        </div>
       </Layout>
     </footer>
   );

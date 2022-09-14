@@ -35,7 +35,7 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
   return (
     <Fragment>
       {page === "accountNavbar" ? (
-        <nav
+        <header
           className={`f-center-between ${classes["mainNavbar--EL"]} ${classes["accountNavbar--EL"]}`}
         >
           <button
@@ -48,89 +48,95 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
             />
           </button>
 
-          <ul
-            className={`${classes["accountSubpages_links--CONTAINER"]} ${
-              navbarMenuIsOpen && classes["openNavbarMenu"]
-            }`}
-          >
-            <li>
-              <Link href={`/account/${accountID}`}>
+          <nav>
+            <ul
+              className={`${classes["accountSubpages_links--CONTAINER"]} ${
+                navbarMenuIsOpen && classes["openNavbarMenu"]
+              }`}
+            >
+              <li>
+                <Link href={`/account/${accountID}`}>
+                  <a
+                    className={`${classes["account_subpage_link--EL"]} ${
+                      classes["homeLink"]
+                    } ${params === "home" ? classes["activeLink"] : ""}`}
+                  >
+                    <img src={`${accountIconsPath}/home.png`} alt="Home" />
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href={`/account/${accountID}/watchlist`}>
+                  <a
+                    className={`${classes["account_subpage_link--EL"]} ${
+                      classes["playlistLink"]
+                    } ${params === "watchlist" ? classes["activeLink"] : ""}`}
+                  >
+                    <img
+                      src={`${accountIconsPath}/video-playlist.png`}
+                      alt="Playlist"
+                    />
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href={`/account/${accountID}/movies`}>
+                  <a
+                    className={`${classes["account_subpage_link--EL"]} ${
+                      classes["moviesLink"]
+                    } ${params === "movies" ? classes["activeLink"] : ""}`}
+                  >
+                    <img src={`${accountIconsPath}/movie.png`} alt="Movie" />
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href={`/account/${accountID}/tvShows`}>
+                  <a
+                    className={`${classes["account_subpage_link--EL"]} ${
+                      classes["tvShowsLink"]
+                    } ${params === "tvShows" ? classes["activeLink"] : ""}`}
+                  >
+                    <img
+                      src={`${accountIconsPath}/tv-show.png`}
+                      alt="TV Show"
+                    />
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href={`/account/${accountID}/actors`}>
+                  <a
+                    className={`${classes["account_subpage_link--EL"]} ${
+                      classes["usersLink"]
+                    } ${params === "actors" ? classes["activeLink"] : ""}`}
+                  >
+                    <img src={`${accountIconsPath}/users.png`} alt="Actors" />
+                  </a>
+                </Link>
+              </li>
+              <li>
                 <a
-                  className={`${classes["account_subpage_link--EL"]} ${
-                    classes["homeLink"]
-                  } ${params === "home" ? classes["activeLink"] : ""}`}
+                  href="https://github.com/SalahSajar/FakeHulu"
+                  target="_blank"
+                  className={`${classes["account_subpage_link--EL"]} ${classes["githubLink"]}`}
                 >
-                  <img src={`${accountIconsPath}/home.png`} alt="Home" />
+                  <img src={`${accountIconsPath}/github.png`} alt="Github" />
                 </a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/account/${accountID}/watchlist`}>
-                <a
-                  className={`${classes["account_subpage_link--EL"]} ${
-                    classes["playlistLink"]
-                  } ${params === "watchlist" ? classes["activeLink"] : ""}`}
-                >
-                  <img
-                    src={`${accountIconsPath}/video-playlist.png`}
-                    alt="Playlist"
-                  />
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/account/${accountID}/movies`}>
-                <a
-                  className={`${classes["account_subpage_link--EL"]} ${
-                    classes["moviesLink"]
-                  } ${params === "movies" ? classes["activeLink"] : ""}`}
-                >
-                  <img src={`${accountIconsPath}/movie.png`} alt="Movie" />
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/account/${accountID}/tvShows`}>
-                <a
-                  className={`${classes["account_subpage_link--EL"]} ${
-                    classes["tvShowsLink"]
-                  } ${params === "tvShows" ? classes["activeLink"] : ""}`}
-                >
-                  <img src={`${accountIconsPath}/tv-show.png`} alt="TV Show" />
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/account/${accountID}/actors`}>
-                <a
-                  className={`${classes["account_subpage_link--EL"]} ${
-                    classes["usersLink"]
-                  } ${params === "actors" ? classes["activeLink"] : ""}`}
-                >
-                  <img src={`${accountIconsPath}/users.png`} alt="Actors" />
-                </a>
-              </Link>
-            </li>
-            <li>
-              <a
-                href="https://github.com/SalahSajar/FakeHulu"
-                target="_blank"
-                className={`${classes["account_subpage_link--EL"]} ${classes["githubLink"]}`}
-              >
-                <img src={`${accountIconsPath}/github.png`} alt="Github" />
-              </a>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </nav>
 
-          <h1 role="heading" className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
+          <span className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
             <img
               src="/assets/accountPage-assets/logos/hulu-white.png"
-              alt="white hulu"
+              role="logo"
+              alt="white hulu logo"
             />
-          </h1>
-        </nav>
+          </span>
+        </header>
       ) : (
-        <nav
+        <header
           className={`f-center-between ${classes["mainNavbar--EL"]} ${
             !!page && classes["signupPage_navbar--EL"]
           }`}
@@ -142,23 +148,19 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
               </a>
             </Link>
           ) : (
-            <h1
-              role="heading"
-              className={`${classes["hulu_nav_logo--WRAPPER"]}`}
-            >
-              <img src={navbarLogoPath} alt="hulu logo" />
-            </h1>
+            <span className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
+              <img src={navbarLogoPath} role="logo" alt="hulu logo" />
+            </span>
           )}
 
           {!page && (
-            <a
-              href="javascript:void(0)"
-              onClick={(e) => changeModalStateHandler(e, "logIn", true)}
-            >
-              log in
-            </a>
+            <Link href="javascript:void(0)">
+              <a onClick={(e) => changeModalStateHandler(e, "logIn", true)}>
+                log in
+              </a>
+            </Link>
           )}
-        </nav>
+        </header>
       )}
     </Fragment>
   );
