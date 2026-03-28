@@ -22,7 +22,8 @@ const LoginModal = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    if (email && password && recaptchaValue) {
+    // if (email && password && recaptchaValue) {
+    if (email && password) {
       signInWithEmailAndPassword(auth, email, password)
         .then((loginRes) => {
           window.location.replace(`/account/${loginRes.user.uid}`);

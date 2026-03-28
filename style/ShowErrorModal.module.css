@@ -1,0 +1,42 @@
+.errorModal__BLOCK {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.errorModal__BLOCK .errorModalBlock__CONTENT_WRAPPER {
+  width: 60rem;
+  color: #eee;
+  text-align: center;
+}
+
+.errorModal__BLOCK .errorModalBlock__CONTENT_WRAPPER .error__ICON {
+  width: 7rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.errorModal__BLOCK .errorModalBlock__CONTENT_WRAPPER .error__MESSAGE {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 1rem 0 2rem;
+}
+
+.errorModal__BLOCK .errorModalBlock__CONTENT_WRAPPER .reload__BTN {
+  display: inline-block;
+  background: none;
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid #fff;
+  border-radius: 30rem;
+  cursor: pointer;
+}

@@ -17,6 +17,8 @@ import classes from "../../../style/home.module.css";
 const account = () => {
   const { fetchGenresHandler } = useContext(GenresContext);
 
+  const year = (new Date().getFullYear()) - 1;
+
   const {
     error,
     isLoading,
@@ -27,6 +29,9 @@ const account = () => {
   useEffect(() => {
     fetchAccountHomePageShowsHandler();
     fetchGenresHandler();
+
+    console.log("---- Full Year");
+    console.log(year);
   }, []);
 
   return (
@@ -50,9 +55,7 @@ const account = () => {
             <main id="movies--SECTION" className={classes["movies--SECTION"]}>
               <div className={classes["shows_Highlighter--EL"]}>
                 <section className={classes["showsType--CONTAINER"]}>
-                  <h4 className={classes["showsType_header--EL"]}>
-                    trending movies
-                  </h4>
+                  <h4 className={classes["showsType_header--EL"]}> trending movies </h4>
 
                   <ShowsUi
                     type="movies"
@@ -61,9 +64,7 @@ const account = () => {
                 </section>
 
                 <section className={classes["showsType--CONTAINER"]}>
-                  <h4 className={classes["showsType_header--EL"]}>
-                    trending tv shows
-                  </h4>
+                  <h4 className={classes["showsType_header--EL"]}>trending tv shows</h4>
 
                   <ShowsUi
                     type="tvShows"
@@ -71,9 +72,7 @@ const account = () => {
                   />
                 </section>
                 <section className={classes["showsType--CONTAINER"]}>
-                  <h4 className={classes["showsType_header--EL"]}>
-                    best Movies of 2021
-                  </h4>
+                  <h4 className={classes["showsType_header--EL"]}>best Movies of {year}</h4>
 
                   <ShowsUi
                     type="movies"
@@ -81,9 +80,7 @@ const account = () => {
                   />
                 </section>
                 <section className={classes["showsType--CONTAINER"]}>
-                  <h4 className={classes["showsType_header--EL"]}>
-                    best TV Shows of 2021
-                  </h4>
+                  <h4 className={classes["showsType_header--EL"]}>best TV Shows of {year}</h4>
 
                   <ShowsUi
                     type="tvShows"

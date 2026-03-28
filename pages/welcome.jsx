@@ -131,6 +131,7 @@ export default function Welcome({ users }) {
         <header className={classes["welcome_header--EL"]}>
           <div className={classes["welcome_header_content--WRAPPER"]}>
             <Navbar changeModalStateHandler={changeModalState__FUNC} />
+            
             <div className={classes["header_content--CONTAINER"]}>
               <div className={classes["header_content--EL"]}>
                 <span className="section_eyebrow--EL">
@@ -153,7 +154,7 @@ export default function Welcome({ users }) {
                 <div className={classes["header_ctas--WRAPPER"]}>
                   <button type="button">get the disney bundle</button>
                   <span className={classes["SUBFEATURESandTERMS--CONTAINER"]}>
-                    <a
+                    <Link
                       href="javascript:void(0)"
                       onClick={(e) =>
                         changeModalState__FUNC(
@@ -164,7 +165,7 @@ export default function Welcome({ users }) {
                       }
                     >
                       What's includes
-                    </a>{" "}
+                    </Link>{" "}
                     See <Link href="javascript:void(0)">Bundle terms</Link>.
                   </span>
                   <Link href="/signup/plans">Sign up for Hulu only</Link>

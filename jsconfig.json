@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@lib/*": ["/lib/*"],
+			"@customHooks/*": ["lib/customHooks/*"],
+			"@components/*": ["components/*"],
+			"@Layout-Comps/*": ["components/Layout/*"],
+			"@Micro-Comps/*": ["components/MicroComps/*"],
+			"@Ui-Comps/*": ["components/Ui/*"],
+			"@Modals/*": ["components/Ui/Modals/*" ,"components/Ui/AccountModals/*"],
+			"@styles/*": ["style/*"]
+		}
+	}
+}

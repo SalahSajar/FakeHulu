@@ -4,8 +4,8 @@
 
 .movie_details--BLOCK .return_link--EL {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 1rem;
+  left: 1rem;
 }
 
 .movie_details--BLOCK .return_link--EL img {
@@ -13,7 +13,7 @@
 }
 
 .movie_details--BLOCK .movie_details_pageHeader--EL {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .movie_details--BLOCK .movie_details_pageHeader--EL .error_modal--EL {

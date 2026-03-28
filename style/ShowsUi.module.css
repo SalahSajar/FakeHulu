@@ -27,21 +27,26 @@
   background-color: #093846;
 }
 
-.shows--CONTAINER .movie_card--EL {
-  min-width: calc(13rem + (160 - 130) * ((100vw - 400px) / (1400 - 400)));
-  max-width: calc(13rem + (160 - 130) * ((100vw - 400px) / (1400 - 400)));
+.shows--CONTAINER .movie_card--EL{
+  flex: 0 0 calc(13rem + (160 - 130) * ((100vw - 400px) / (1400 - 400)));
 }
 
 @media only screen and (min-width: 1800px) {
   .shows--CONTAINER .movie_card--EL {
-    min-width: 28rem;
-    max-width: 28rem;
+    flex: 0 0 28rem;
   }
 }
 
-.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_img--WRAPPER {
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movieDetails__LINK{
+  width: 100%;
   aspect-ratio: 0.65;
+  background-color: red;
 }
+
+.shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_img--WRAPPER{
+  height: 100%;
+}
+
 
 .shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_img--WRAPPER:hover img {
   -webkit-transform: scale(1.08);
@@ -100,8 +105,8 @@
 .shows--CONTAINER .movie_card--EL .movie_content--CONTAINER .movie_extraDetails--CONTAINER .movie_genre--EL {
   color: #aaa;
   width: 100%;
-  overflow: hidden;
+  /*overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: nowrap;*/
 }
 /*# sourceMappingURL=ShowsUi.module.css.map */

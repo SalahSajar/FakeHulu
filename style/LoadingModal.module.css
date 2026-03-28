@@ -1,5 +1,5 @@
 .loading_modal--EL {
-  height: inherit;
+  min-height: inherit;
   display: -ms-grid;
   display: grid;
   place-items: center;

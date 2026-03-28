@@ -12,6 +12,7 @@ import { UserWatchlistContext } from "../../lib/userWatchlistContext";
 import classes from "../../style/ShowDetailsUi.module.css";
 
 const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
+  const router = useRouter();
   const { accountID } = useRouter().query;
 
   const {
@@ -21,8 +22,10 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
   } = useWatchlist();
   const { quickUserAuthCheckHandler } = useUserAuth();
 
-  const { userWatchlistMovies, userWatchlistTvShows } =
-    useContext(UserWatchlistContext);
+  const { userWatchlistMovies, userWatchlistTvShows } = useContext(UserWatchlistContext);
+
+  const formattedReleaseDate = (showDetails.release_date || showDetails.first_air_date).replaceAll("-", "/");
+  const formattedShowGenres = showDetails.genres.map((genre) => genre.name).join(", ");
 
   const runTimeHander = (runtime) => {
     const hours = Math.floor(runtime / 60);
@@ -74,7 +77,7 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
             );
           }
         } else {
-          window.location.replace("/welcome");
+          router.replace("/welcome");
         }
       });
     }
@@ -93,7 +96,7 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
     <Fragment>
       <div
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${showDetails.backdrop_path})`,
+          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${showDetails.backdrop_path})`,
         }}
         className={classes["showdetails_content--CONTAINER"]}
       >
@@ -101,10 +104,8 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
           {showDetails.poster_path ? (
             <img
               loading="eager"
-              src={`https://image.tmdb.org/t/p/original${showDetails.poster_path}`}
-              alt={`${
-                type === "movies" ? showDetails.title : showDetails.name
-              } poster`}
+              src={`https://image.tmdb.org/t/p/w780${showDetails.poster_path}`}
+              alt={`${type === "movies" ? showDetails.title : showDetails.name} poster`}
             />
           ) : (
             <img
@@ -115,56 +116,34 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
         </div>
         <div className={classes["show_details--WRAPPER"]}>
           <div className={classes["show_details_header--CONTAINER"]}>
-            <h2 className={classes["show_title--EL"]}>
-              {type === "movies" ? showDetails.title : showDetails.name}
-            </h2>
+            <h2 className={classes["show_title--EL"]}> {showDetails.title || showDetails.name} </h2>
 
-            {type === "movies" ? (
-              <span className={classes["show_mini_details--EL"]}>
-                {showDetails.release_date.replaceAll("-", "/")} &#x2726;{" "}
-                {showDetails.genres.map((genre) => genre.name).join(", ")}{" "}
-                &#x2726;{" "}
-                {!!showDetails.runtime && runTimeHander(showDetails.runtime)}
-              </span>
-            ) : (
-              <span className={classes["show_mini_details--EL"]}>
-                {showDetails.first_air_date.replaceAll("-", "/")} &#x2726;{" "}
-                {showDetails.genres.map((genre) => genre.name).join(", ")}{" "}
-                &#x2726;{" "}
-                {`${showDetails.number_of_seasons} ${
-                  showDetails.number_of_seasons > 1 ? "Seasons" : "Season"
-                }`}
-              </span>
-            )}
+            <span className={classes["show_mini_details--EL"]}>
+              {formattedReleaseDate} &#x2726; {formattedShowGenres} &#x2726; {
+                type === "movies" ? !!showDetails.runtime && runTimeHander(showDetails.runtime) : `${showDetails.number_of_seasons} Season${showDetails.number_of_seasons > 1 ? "s" : ""}`
+              }
+            </span>
           </div>
 
           <div className={classes["show_description--CONTAINER"]}>
             <span
               className={`${classes["show_detail_header--EL"]} ${classes["show_description_header--EL"]}`}
-            >
-              Storyline
-            </span>
-            <p className={classes["show_decription--EL"]}>
-              {showDetails.overview}
-            </p>
+            >Storyline</span>
+            <p className={classes["show_decription--EL"]}> {showDetails.overview} </p>
           </div>
 
           {!!showDetails.vote_average && (
             <div className={classes["show_ratings--CONTAINER"]}>
               <span
                 className={`${classes["show_detail_header--EL"]} ${classes["show_ratings_header--EL"]}`}
-              >
-                Rating
-              </span>
+              >Rating</span>
 
               <div className={classes["show_rating_block--EL"]}>
                 <img
                   src="/assets/accountPage-assets/logos/imdb_icon.png"
                   alt="imdb icon"
                 />
-                <span className={classes["show_rating--EL"]}>
-                  {showDetails.vote_average}
-                </span>
+                <span className={classes["show_rating--EL"]}>{showDetails.vote_average}</span>
               </div>
             </div>
           )}
@@ -173,26 +152,18 @@ const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
             <div className={classes["show_companies--CONTAINER"]}>
               <span
                 className={`${classes["show_detail_header--EL"]} ${classes["show_companies_header--EL"]}`}
-              >
-                Production Companies
-              </span>
+              > Production Companies </span>
               <div className={classes["show_companies_blocks--WRAPPER"]}>
-                {showDetails.production_companies.map((productionCompany) => {
-                  return (
-                    productionCompany.logo_path && (
-                      <div
-                        key={productionCompany.name}
-                        className={classes["show_company_details--BLOCK"]}
-                      >
+                {showDetails?.production_companies?.map((productionCompany) => {
+                  return ( productionCompany.logo_path && (
+                      <div key={productionCompany.name} className={classes["show_company_details--BLOCK"]} >
                         <div className={classes["show_company_image--EL"]}>
                           <img
-                            src={`https://image.tmdb.org/t/p/original${productionCompany.logo_path}`}
+                            src={`https://image.tmdb.org/t/p/w154${productionCompany.logo_path}`}
                             alt={`${productionCompany.name} logo`}
                           />
                         </div>
-                        <span className={classes["show_company_title--EL"]}>
-                          {productionCompany.name}
-                        </span>
+                        <span className={classes["show_company_title--EL"]}>{productionCompany.name}</span>
                       </div>
                     )
                   );

@@ -1,0 +1,9 @@
+.showDetailsBlock__PAGE_BASE {
+  position: relative;
+}
+
+.showDetailsBlock__PAGE_BASE .movieDetails__SECTION {
+  min-height: 100vh;
+  height: fit-content;
+}
+/*# sourceMappingURL=movie.module.css.map */

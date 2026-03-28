@@ -25,11 +25,9 @@ const Account = () => {
   const { signupHandler, error, errorType, isLoading, success } = useSignup();
 
   const { emailIsvalid, emailIsChanged, emailInputHandlerObj } = useInput();
-  const { passwordIsvalid, passwordIsChanged, passwordInputHandlerObj } =
-    useInput();
+  const { passwordIsvalid, passwordIsChanged, passwordInputHandlerObj } = useInput();
   const { nameIsvalid, nameIsChanged, nameInputHandlerObj } = useInput();
-  const { birthdayIsvalid, birthdayIsChanged, birthdayInputHandlerObj } =
-    useInput();
+  const { birthdayIsvalid, birthdayIsChanged, birthdayInputHandlerObj } = useInput();
 
   const { planSelected } = useContext(SignupContext);
 
@@ -85,22 +83,16 @@ const Account = () => {
   return (
     <main className={classes["signupAccount_main--EL"]}>
       {isLoading && <SignupModal signupState="loading" />}
-      {error && (
+      {error || success && (
         <SignupModal
           signupState="signupMessage"
-          messageType="error"
-          errorType={errorType}
-        />
-      )}
-      {success && (
-        <SignupModal
-          signupState="signupMessage"
-          messageType="success"
+          messageType={success ? "success" : "error"}
           errorType={errorType}
         />
       )}
 
       <Navbar page="signup" />
+
       <SignupLayout size="sm_layout">
         <div className="signUp_header--EL">
           <h2>Create Your Account</h2>

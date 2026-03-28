@@ -56,18 +56,18 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
             >
               <li>
                 <Link href={`/account/${accountID}`}>
-                  <a
+                  <span
                     className={`${classes["account_subpage_link--EL"]} ${
                       classes["homeLink"]
                     } ${params === "home" ? classes["activeLink"] : ""}`}
                   >
                     <img src={`${accountIconsPath}/home.png`} alt="Home" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href={`/account/${accountID}/watchlist`}>
-                  <a
+                  <span
                     className={`${classes["account_subpage_link--EL"]} ${
                       classes["playlistLink"]
                     } ${params === "watchlist" ? classes["activeLink"] : ""}`}
@@ -76,23 +76,23 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
                       src={`${accountIconsPath}/video-playlist.png`}
                       alt="Playlist"
                     />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href={`/account/${accountID}/movies`}>
-                  <a
+                  <span
                     className={`${classes["account_subpage_link--EL"]} ${
                       classes["moviesLink"]
                     } ${params === "movies" ? classes["activeLink"] : ""}`}
                   >
                     <img src={`${accountIconsPath}/movie.png`} alt="Movie" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href={`/account/${accountID}/tvShows`}>
-                  <a
+                  <span
                     className={`${classes["account_subpage_link--EL"]} ${
                       classes["tvShowsLink"]
                     } ${params === "tvShows" ? classes["activeLink"] : ""}`}
@@ -101,28 +101,28 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
                       src={`${accountIconsPath}/tv-show.png`}
                       alt="TV Show"
                     />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href={`/account/${accountID}/actors`}>
-                  <a
+                  <span
                     className={`${classes["account_subpage_link--EL"]} ${
                       classes["usersLink"]
                     } ${params === "actors" ? classes["activeLink"] : ""}`}
                   >
                     <img src={`${accountIconsPath}/users.png`} alt="Actors" />
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li>
-                <a
+                <span
                   href="https://github.com/SalahSajar/FakeHulu"
                   target="_blank"
                   className={`${classes["account_subpage_link--EL"]} ${classes["githubLink"]}`}
                 >
                   <img src={`${accountIconsPath}/github.png`} alt="Github" />
-                </a>
+                </span>
               </li>
             </ul>
           </nav>
@@ -143,9 +143,9 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
         >
           {page === "signup" ? (
             <Link href="/welcome">
-              <a className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
+              <span className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
                 <img src={navbarLogoPath} alt="hulu logo" />
-              </a>
+              </span>
             </Link>
           ) : (
             <span className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
@@ -155,9 +155,9 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
 
           {!page && (
             <Link href="javascript:void(0)">
-              <a onClick={(e) => changeModalStateHandler(e, "logIn", true)}>
+              <span onClick={(e) => changeModalStateHandler(e, "logIn", true)}>
                 log in
-              </a>
+              </span>
             </Link>
           )}
         </header>

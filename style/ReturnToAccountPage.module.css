@@ -1,0 +1,9 @@
+.returnToAccount__LINK {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.returnToAccount__LINK img {
+  width: 4rem;
+}
