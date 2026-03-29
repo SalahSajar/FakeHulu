@@ -29,10 +29,9 @@ const account = () => {
   useEffect(() => {
     fetchAccountHomePageShowsHandler();
     fetchGenresHandler();
-
-    console.log("---- Full Year");
-    console.log(year);
   }, []);
+
+  console.log(accountHomePageShows)
 
   return (
     <Fragment>
@@ -72,19 +71,19 @@ const account = () => {
                   />
                 </section>
                 <section className={classes["showsType--CONTAINER"]}>
-                  <h4 className={classes["showsType_header--EL"]}>best Movies of {year}</h4>
+                  <h4 className={classes["showsType_header--EL"]}>best Movies in Historty</h4>
 
                   <ShowsUi
                     type="movies"
-                    showsData={accountHomePageShows.bestMoviesOf2021.results}
+                    showsData={accountHomePageShows.topRatedMovies.results}
                   />
                 </section>
                 <section className={classes["showsType--CONTAINER"]}>
-                  <h4 className={classes["showsType_header--EL"]}>best TV Shows of {year}</h4>
+                  <h4 className={classes["showsType_header--EL"]}>best TV Shows in Historty</h4>
 
                   <ShowsUi
                     type="tvShows"
-                    showsData={accountHomePageShows.bestTvShowsOf2021.results}
+                    showsData={accountHomePageShows.topRatedTvShows.results}
                   />
                 </section>
               </div>
