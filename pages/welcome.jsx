@@ -87,12 +87,9 @@ export default function Welcome({ users }) {
     //////////////////////////////////////
 
     // Channels Link Details
-    const liveSport_TapLink__Details =
-      liveSport_TapLink__EL.getBoundingClientRect();
-    const breakingNews_TapLink__Details =
-      breakingNews_TapLink__EL.getBoundingClientRect();
-    const biggestEvents_TapLink__Details =
-      biggestEvents_TapLink__EL.getBoundingClientRect();
+    const liveSport_TapLink__Details = liveSport_TapLink__EL.getBoundingClientRect();
+    const breakingNews_TapLink__Details = breakingNews_TapLink__EL.getBoundingClientRect();
+    const biggestEvents_TapLink__Details = biggestEvents_TapLink__EL.getBoundingClientRect();
     //////////////////////////////////////
 
     if (activeChannelsCategory === 0) {
