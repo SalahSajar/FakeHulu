@@ -1,4 +1,5 @@
 import {useEffect} from "react";
+import {useRouter} from "next/router";
 
 import {auth} from "../lib/configs/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
@@ -6,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import LoadingModal from "../components/Ui/AccountModals/LoadingModal";
 
 export default function Home() {
+  const router = useRouter();
 
   useEffect(() => {
     onAuthStateChanged(auth , user => {
@@ -16,9 +18,9 @@ export default function Home() {
         if (localUserUid === "null") localStorage.setItem("uid", user.uid);
         if (localUserToken === "null") localStorage.setItem("token", user.accessToken);
 
-        window.location.replace(`/account/${user.uid}`);
+        router.replace(`/account/${user.uid}`);
       } else {
-        window.location.replace(`/welcome`);
+        router.replace(`/welcome`);
       }
     });
   }, []);
