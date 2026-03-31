@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import classes from "../../style/Modal.module.css";
+import classes from "@styles/Modal.module.css";
 
 import LoginModal from "./Modals/LoginModal";
 import SubscriptionFeaturesIncludedModal from "./Modals/SubscriptionFeaturesIncludedModal";

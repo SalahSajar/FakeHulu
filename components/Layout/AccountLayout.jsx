@@ -1,14 +1,14 @@
 import React, { Fragment, useEffect } from "react";
 import { useRouter } from "next/router";
 
-import { auth } from "../../lib/configs/firebaseConfig";
+import { auth } from "@lib/configs/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 
-import { useUserAuth } from "../../lib/customHooks/useUserAuth";
+import { useUserAuth } from "@customHooks/useUserAuth";
 
 import Navbar from "../Ui/Navbar";
 
-import classes from "../../style/accountLayout.module.css";
+import classes from "@styles/accountLayout.module.css";
 
 const AccountLayout = ({ children, accountPage, showNavbar }) => {
   const { accountID } = useRouter().query;

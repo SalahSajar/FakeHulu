@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 
-import classes from "../../../style/channelsAreaSearcherModal.module.css";
+import classes from "@styles/channelsAreaSearcherModal.module.css";
 
 const EntertainmentAndLifestyle_Channels_Icons_Path = "/assets/welcomePage-assets/channels_Icons/Entertainment&Lifestyle_Channels_Icons";
 const Entertainment_AddOn_Icons_Path = "/assets/welcomePage-assets/channels_Icons/Entertainment_Add-on_Icons";

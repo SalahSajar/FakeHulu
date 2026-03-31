@@ -1,14 +1,14 @@
 import { Fragment, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import classes from "../../style/Signup_Plans.module.css";
+import classes from "@styles/Signup_Plans.module.css";
 
-import Navbar from "../../components/Ui/Navbar";
-import SignupLayout from "../../components/Layout/SignupLayout";
+import Navbar from "@Ui-Comps/Navbar";
+import SignupLayout from "@Layout-Comps/SignupLayout";
 
-import InfoModal from "../../components/Ui/InfoModal";
+import InfoModal from "@Ui-Comps/InfoModal";
 
-import { SignupContext } from "../../lib/signupContext";
+import { SignupContext } from "@lib/signupContext";
 
 const Plans = () => {
   const router = useRouter();

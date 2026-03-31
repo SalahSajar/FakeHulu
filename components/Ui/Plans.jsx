@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import Layout from "../Layout/Layout";
 
-import classes from "../../style/Welcome_Plans.module.css";
+import classes from "@styles/Welcome_Plans.module.css";
 
 const Pricing_Checkmark_black_Path =
   "/assets/welcomePage-assets/icons/Pricing_Checkmark_black.svg";
@@ -29,61 +29,27 @@ const Plans = () => {
                 <thead>
                   <tr>
                     <th className={classes["huluPlan_rowStarter--EL"]}>
-                      <div
-                        className={classes["huluPlans_rowHeader--CONTAINER"]}
-                      >
-                        <div
-                          className={
-                            classes["huluPlans_rowHeader_img--CONTAINER"]
-                          }
-                        >
-                          <img
-                            src="/assets/welcomePage-assets/logos/bundles.svg"
-                            alt="hulu disney+ espn+"
-                          />
+                      <div className={classes["huluPlans_rowHeader--CONTAINER"]} >
+                        <div className={ classes["huluPlans_rowHeader_img--CONTAINER"] } >
+                          <img src="/assets/welcomePage-assets/logos/bundles.svg" alt="hulu disney+ espn+" />
                         </div>
-                        <div
-                          className={
-                            classes["huluPlans_rowHeader_typos--CONTAINER"]
-                          }
-                        >
-                          <h3>
-                            Bundle & Save{" "}
+                        <div className={ classes["huluPlans_rowHeader_typos--CONTAINER"] } >
+                          <h3> Bundle & Save{" "}
                             <a href="#">
-                              <img
-                                src="/assets/welcomePage-assets/icons/info.png"
-                                alt="info icon"
-                              />
+                              <img src="/assets/welcomePage-assets/icons/info.png" alt="info icon" />
                             </a>
                           </h3>
-                          <p>
-                            Includes Hulu (plan of your choice), Disney+, and
-                            ESPN+.
-                          </p>
+                          <p> Includes Hulu (plan of your choice), Disney+, and ESPN+. </p>
                         </div>
                       </div>
                     </th>
-                    <th
-                      scope="col"
-                      className={classes["huluPlan_tableColumn_header--EL"]}
-                    >
+                    <th scope="col" className={classes["huluPlan_tableColumn_header--EL"]} >
                       <div className={classes["planHeader_layoutFixer--EL"]}>
                         <div className={classes["plan_header--EL"]}>
-                          <span className={classes["planPopularity--EL"]}>
-                            Most Popular
-                          </span>
-                          <span className={classes["plan_header_eyebrow--EL"]}>
-                            30 DAY FREE TRIAL
-                          </span>
-                          <h4 className={classes["plan_header_title--EL"]}>
-                            Hulu
-                          </h4>
-                          <button
-                            type="button"
-                            className={classes["plan_cta_btn--EL"]}
-                          >
-                            select
-                          </button>
+                          <span className={classes["planPopularity--EL"]}> Most Popular </span>
+                          <span className={classes["plan_header_eyebrow--EL"]}> 30 DAY FREE TRIAL </span>
+                          <h4 className={classes["plan_header_title--EL"]}> Hulu </h4>
+                          <button type="button" className={classes["plan_cta_btn--EL"]} > select </button>
                         </div>
                       </div>
                     </th>

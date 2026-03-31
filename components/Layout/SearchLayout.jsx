@@ -1,10 +1,10 @@
 import { useEffect, Fragment, useState, useContext } from "react";
 
-import { SearchContext } from "../../lib/searchContext";
+import { SearchContext } from "@lib/searchContext";
 
 import AccountLayout from "./AccountLayout";
 
-import classes from "../../style/SearchLayout.module.css";
+import classes from "@styles/SearchLayout.module.css";
 
 let firstRenderBlocker = true;
 

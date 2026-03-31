@@ -1,6 +1,6 @@
 import { Fragment, useEffect } from "react";
 
-import classes from "../../style/InfoModal.module.css";
+import classes from "@styles/InfoModal.module.css";
 
 const toggleMoreInfosBlockHandler = (e) => {
   const btnParentElement = e.currentTarget.parentElement;

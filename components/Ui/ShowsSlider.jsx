@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import classes from "../../style/ShowsSlider.module.css";
+import classes from "@styles/ShowsSlider.module.css";
 
 const ShowsSlider = ({ children, showsArr, type }) => {
   const { accountID } = useRouter().query;

@@ -5,14 +5,14 @@ import Head from "next/head";
 import { auth } from "../lib/configs/firebaseConfig";
 import { signOut } from "firebase/auth";
 
-import Layout from "../components/Layout/Layout";
-import Modal from "../components/Ui/Modal";
-import Navbar from "../components/Ui/Navbar";
-import SpotlightTabs from "../components/Ui/SpotlightTabs";
-import Plans from "../components/Ui/Plans";
-import Footer from "../components/Ui/Footer";
+import Layout from "@Layout-Comps/Layout";
+import Modal from "@Ui-Comps/Modal";
+import Navbar from "@Ui-Comps/Navbar";
+import SpotlightTabs from "@Ui-Comps/SpotlightTabs";
+import Plans from "@Ui-Comps/Plans";
+import Footer from "@Ui-Comps/Footer";
 
-import classes from "../style/Welcome.module.css";
+import classes from "@styles/Welcome.module.css";
 
 export default function Welcome({ users }) {
   const [displayModal, setDisplayModal] = useState(false);

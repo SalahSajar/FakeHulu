@@ -2,17 +2,17 @@ import { Fragment, useEffect, useContext } from "react";
 import Head from "next/head";
 
 // Custom React Hooks
-import { useFetchDetails } from "../../../lib/customHooks/useFetchDetails";
+import { useFetchDetails } from "@customHooks/useFetchDetails";
 
 // custum Contexts
-import { GenresContext } from "../../../lib/genresContext";
+import { GenresContext } from "@lib/genresContext";
 
 // Custom Components
-import ShowsUi from "../../../components/Ui/ShowsUi";
-import LoadingModal from "../../../components/Ui/AccountModals/LoadingModal";
-import AccountLayout from "../../../components/Layout/AccountLayout";
+import ShowsUi from "@Ui-Comps/ShowsUi";
+import LoadingModal from "@Ui-Comps/AccountModals/LoadingModal";
+import AccountLayout from "@Layout-Comps/AccountLayout";
 
-import classes from "../../../style/home.module.css";
+import classes from "@styles/home.module.css";
 
 const account = () => {
   const { fetchGenresHandler } = useContext(GenresContext);

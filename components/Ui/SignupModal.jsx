@@ -3,19 +3,13 @@ import { Fragment } from "react";
 import Loading from "./SignupModals/Loading";
 import SignupMessageModal from "./SignupModals/SignupMessageModal";
 
-import classes from "../../style/SignupModal.module.css";
+import classes from "@styles/SignupModal.module.css";
 
 const SignupModal = ({ signupState, messageType, errorType }) => {
   return (
     <Fragment>
-      <aside
-        className={`${classes["signupModal--EL"]} ${
-          signupState === "loading" ? classes["signupLoadingModal--EL"] : ""
-        }`}
-      >
-        {signupState === "loading" ? (
-          <Loading />
-        ) : (
+      <aside className={`${classes["signupModal--EL"]} ${ signupState === "loading" ? classes["signupLoadingModal--EL"] : "" }`} >
+        {signupState === "loading" ? <Loading /> : (
           <SignupMessageModal messageType={messageType} errorType={errorType} />
         )}
       </aside>

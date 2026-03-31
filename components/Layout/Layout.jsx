@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from "../../style/layout.module.css";
+import classes from "@styles/layout.module.css";
 
 const Layout = ({children,biggerspacing}) => {
     return (

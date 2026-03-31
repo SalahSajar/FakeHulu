@@ -1,6 +1,6 @@
 import {Fragment} from 'react';
 
-import classes from "../../style/SpotlightTabs.module.css"
+import classes from "@styles/SpotlightTabs.module.css"
 
 const SpotlightTabs = ({spotlight, changeModalStateHandler}) => {
   return (
@@ -9,17 +9,12 @@ const SpotlightTabs = ({spotlight, changeModalStateHandler}) => {
         <div className={classes["channel_content--CONTAINER"]}>
             <h3 className={classes["channelTap_headline--EL"]}>{!spotlight ? "live sports" : spotlight === 1 ? "breaking news" : "biggest events" }</h3>
             <p className={classes["channelTap_subheadline--EL"]}>
-                {
-                    !spotlight ?
-                    "Catch your games at home or on the go. Stream live games from major college and pro leagues including the NCAA®, NBA, NHL, NFL, and more.":
-                    spotlight === 1 ?
-                    "Keep pace with what's going on locally and globally with trusted opinions from all the top news networks.":
-                    "Spectacular, can't-miss moments like the Olympics, Grammys®, Oscars®, Emmys®, and more."
-
-                }
+                {!spotlight ?
+                "Catch your games at home or on the go. Stream live games from major college and pro leagues including the NCAA®, NBA, NHL, NFL, and more.":
+                spotlight === 1 ?
+                "Keep pace with what's going on locally and globally with trusted opinions from all the top news networks.":
+                "Spectacular, can't-miss moments like the Olympics, Grammys®, Oscars®, Emmys®, and more."}
             </p>
-            
-            
 
             {
                 !spotlight ? (

@@ -24,16 +24,13 @@ const ShowDetailsPageLayout = ({
 }) => {
 	const [displayTrailerModal, setDisplayTrailerModal] = useState(false);
 
-	const displayTrailerModalHandler = (state) => {
-		setDisplayTrailerModal(state);
-	};
 	return (
 		<AccountLayout showNavbar={false}>
 	        <main className={classes["showDetailsBlock__PAGE_BASE"]}>
 				{/* Trailer Modal */}
 		          {showTrailerDetails && (
 		            <TrailerModal
-		              displayTrailerModalHandler={displayTrailerModalHandler}
+		              displayTrailerModalHandler={(state) => setDisplayTrailerModal(state)}
 		              displayTrailerModal={displayTrailerModal}
 		              showTrailerDetails={showTrailerDetails}
 		            />
@@ -49,7 +46,7 @@ const ShowDetailsPageLayout = ({
 		            	!!showDetails && <ShowDetailsUi 
 		            		type={type} 
 		            		showDetails={showDetails} 
-		            		displayTrailerModalHandler={displayTrailerModalHandler} 
+		            		displayTrailerModalHandler={(state) => setDisplayTrailerModal(state)} 
 		            	/>
 		            )}
 	          	</section>

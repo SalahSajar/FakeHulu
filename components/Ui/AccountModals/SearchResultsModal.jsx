@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { GenresContext } from "../../../lib/genresContext";
+import { GenresContext } from "@lib/genresContext";
 
-import classes from "../../../style/searchResultsModal.module.css";
+import classes from "@styles/searchResultsModal.module.css";
 
 const SearchResultsModal = ({ type, searchResults }) => {
   const { accountID } = useRouter().query;
@@ -15,8 +15,7 @@ const SearchResultsModal = ({ type, searchResults }) => {
     let GenresResult;
 
     if (type === "movies") {
-      GenresResult = genres
-        .reduce((acc, genre) => {
+      GenresResult = genres.reduce((acc, genre) => {
           const genreObj = movieGenres.find(
             (movieGenre) => movieGenre.id === genre
           );
@@ -24,22 +23,19 @@ const SearchResultsModal = ({ type, searchResults }) => {
           if (!!genreObj) acc.push(genreObj.name);
 
           return acc;
-        }, [])
-        .join(", ");
+        }, []).join(", ");
     }
 
     if (type === "tvShows") {
-      GenresResult = genres
-        .reduce((acc, genre) => {
-          const genreObj = tvShowGenres.find(
-            (tvShowGenre) => tvShowGenre.id === genre
-          );
+      GenresResult = genres.reduce((acc, genre) => {
+        const genreObj = tvShowGenres.find(
+          (tvShowGenre) => tvShowGenre.id === genre
+        );
 
-          if (!!genreObj) acc.push(genreObj.name);
+        if (!!genreObj) acc.push(genreObj.name);
 
-          return acc;
-        }, [])
-        .join(", ");
+        return acc;
+      }, []).join(", ");
     }
 
     return GenresResult;

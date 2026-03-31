@@ -1,14 +1,14 @@
 import React, { useEffect, Fragment, useContext } from "react";
 import Head from "next/head";
 
-import { SearchContext } from "../../../../lib/searchContext";
+import { SearchContext } from "@lib/searchContext";
 
-import SearchLayout from "../../../../components/Layout/SearchLayout";
+import SearchLayout from "@Layout-Comps/SearchLayout";
 
-import SearchResultsModal from "../../../../components/Ui/AccountModals/SearchResultsModal";
-import LoadingModal from "../../../../components/Ui/AccountModals/LoadingModal";
+import SearchResultsModal from "@Ui-Comps/AccountModals/SearchResultsModal";
+import LoadingModal from "@Ui-Comps/AccountModals/LoadingModal";
 
-import classes from "../../../../style/movies.module.css";
+import classes from "@styles/movies.module.css";
 
 const Movies = () => {
   const { searchTrendingShows, showsFounded, loading, error } =

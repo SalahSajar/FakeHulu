@@ -3,20 +3,20 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 // custom Hooks
-import { useInput } from "../../lib/customHooks/useInput";
-import { useSignup } from "../../lib/customHooks/useSignup";
+import { useInput } from "@customHooks/useInput";
+import { useSignup } from "@customHooks/useSignup";
 
 // custom context api
-import { SignupContext } from "../../lib/signupContext";
+import { SignupContext } from "@lib/signupContext";
 
 // import Page classes
-import classes from "../../style/Account.module.css";
+import classes from "@styles/Account.module.css";
 
 // import Ui Components
-import Navbar from "../../components/Ui/Navbar";
-import SignupLayout from "../../components/Layout/SignupLayout";
-import InfoModal from "../../components/Ui/InfoModal";
-import SignupModal from "../../components/Ui/SignupModal";
+import Navbar from "@Ui-Comps/Navbar";
+import SignupLayout from "@Layout-Comps/SignupLayout";
+import InfoModal from "@Ui-Comps/InfoModal";
+import SignupModal from "@Ui-Comps/SignupModal";
 
 // Page Constructor Function
 const Account = () => {

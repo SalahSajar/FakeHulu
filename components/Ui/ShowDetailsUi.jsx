@@ -1,15 +1,15 @@
 import React, { Fragment, useContext } from "react";
 import { useRouter } from "next/router";
 
-import { auth } from "../../lib/configs/firebaseConfig";
+import { auth } from "@lib/configs/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 
-import { useWatchlist } from "../../lib/customHooks/useWatchlist";
-import { useUserAuth } from "../../lib/customHooks/useUserAuth";
+import { useWatchlist } from "@lcustomHooks/useWatchlist";
+import { useUserAuth } from "@lcustomHooks/useUserAuth";
 
-import { UserWatchlistContext } from "../../lib/userWatchlistContext";
+import { UserWatchlistContext } from "@lib/userWatchlistContext";
 
-import classes from "../../style/ShowDetailsUi.module.css";
+import classes from "@styles/ShowDetailsUi.module.css";
 
 const ShowDetailsUi = ({ type, showDetails, displayTrailerModalHandler }) => {
   const router = useRouter();

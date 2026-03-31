@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import classes from "../../../style/TrailerModal.module.css";
+import classes from "@styles/TrailerModal.module.css";
 
 const TrailerModal = ({
   displayTrailerModalHandler,

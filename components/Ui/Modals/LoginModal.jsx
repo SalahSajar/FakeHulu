@@ -1,14 +1,19 @@
 import { Fragment, useState } from "react";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 import { auth } from "../../../lib/configs/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 import ReCAPTCHA from "react-google-recaptcha";
 
+import InDevEnv from "@lib/scripts/CheckIfInDevEnv";
+
 import classes from "../../../style/LoginModal.module.css";
 
 const LoginModal = () => {
+  const router = useRouter();
+
   const [loginError, setLoginError] = useState(false);
   const [loginErrorType, setLoginErrorType] = useState(null);
 
@@ -24,9 +29,8 @@ const LoginModal = () => {
 
     // if (email && password && recaptchaValue) {
     if (email && password) {
-      signInWithEmailAndPassword(auth, email, password)
-        .then((loginRes) => {
-          window.location.replace(`/account/${loginRes.user.uid}`);
+      signInWithEmailAndPassword(auth, email, password).then((loginRes) => {
+          router.replace(`/account/${loginRes.user.uid}`);
           document.querySelector("body").style.overflowY = "scroll";
 
           localStorage.setItem("uid", loginRes.user.uid);
@@ -52,24 +56,11 @@ const LoginModal = () => {
   return (
     <Fragment>
       <h3 className={classes["loginModal_title--EL"]}>Log In</h3>
-      <form
-        onSubmit={submitLoginFormHandler}
-        className={classes["login_form--EL"]}
-      >
-        <span
-          className={`${classes["loginError--EL"]} ${
-            loginError && classes["loginErrorActivate"]
-          }`}
-        >
-          {!!loginErrorType &&
-            loginErrorType === "userNotFound" &&
-            "Error: User not Found"}
-          {!!loginErrorType &&
-            loginErrorType === "wrongPassword" &&
-            "Error: Password is Incorrect"}
-          {!!loginErrorType &&
-            loginErrorType === "failedRequest" &&
-            "Error: Something Went Wrong, Please try Again Later"}
+      <form onSubmit={submitLoginFormHandler} className={classes["login_form--EL"]} >
+        <span className={`${classes["loginError--EL"]} ${ loginError && classes["loginErrorActivate"]}`} >
+          {!!loginErrorType && loginErrorType === "userNotFound" && "Error: User not Found"}
+          {!!loginErrorType && loginErrorType === "wrongPassword" && "Error: Password is Incorrect"}
+          {!!loginErrorType && loginErrorType === "failedRequest" && "Error: Something Went Wrong, Please try Again Later"}
         </span>
 
         <div className={classes["login_form--CONTAINER"]}>
@@ -89,16 +80,11 @@ const LoginModal = () => {
         </a>
         <div className={classes["recaptch_block--CONTAINER"]}>
           <ReCAPTCHA
-            sitekey={
-              process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY ||
-              process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA_SITEKEY
-            }
+            sitekey={InDevEnv ? process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY : process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA__SITEKEY}
             onChange={verifyCallback}
           />
         </div>
-        <button type="submit" className={classes["login_btn--EL"]}>
-          LOG IN
-        </button>
+        <button type="submit" className={classes["login_btn--EL"]}> LOG IN </button>
       </form>
       <span className={classes["signUp_directioning--EL"]}>
         Don't have an account?{" "}

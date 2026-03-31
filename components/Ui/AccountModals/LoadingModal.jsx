@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "../../../style/LoadingModal.module.css";
+import classes from "@styles/LoadingModal.module.css";
 
 const LoadingModal = ({ spacedState, largeHeight }) => {
   return (

@@ -2,14 +2,12 @@ import { Fragment, useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import classes from "../../style/Navbar.module.css";
+import classes from "@styles/Navbar.module.css";
 
 const Navbar = ({ changeModalStateHandler, page, params }) => {
   const [navbarMenuIsOpen, setNavbarMenuIsOpen] = useState(true);
 
-  const navbarLogoPath = page
-    ? "/assets/signupPage-assets/logos/hulu-dark.svg"
-    : "/assets/welcomePage-assets/logos/logo.png";
+  const navbarLogoPath = page ? "/assets/signupPage-assets/logos/hulu-dark.svg" : "/assets/welcomePage-assets/logos/logo.png";
 
   const accountIconsPath = "/assets/accountPage-assets/icons";
 
@@ -116,13 +114,13 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
                 </Link>
               </li>
               <li>
-                <span
+                <Link
                   href="https://github.com/SalahSajar/FakeHulu"
                   target="_blank"
                   className={`${classes["account_subpage_link--EL"]} ${classes["githubLink"]}`}
                 >
                   <img src={`${accountIconsPath}/github.png`} alt="Github" />
-                </span>
+                </Link>
               </li>
             </ul>
           </nav>

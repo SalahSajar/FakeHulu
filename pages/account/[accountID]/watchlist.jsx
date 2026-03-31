@@ -3,14 +3,14 @@ import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { useWatchlist } from "../../../lib/customHooks/useWatchlist";
+import { useWatchlist } from "@customHooks/useWatchlist";
 
-import { UserWatchlistContext } from "../../../lib/userWatchlistContext";
+import { UserWatchlistContext } from "@lib/userWatchlistContext";
 
-import AccountLayout from "../../../components/Layout/AccountLayout";
-import LoadingModal from "../../../components/Ui/AccountModals/LoadingModal";
+import AccountLayout from "@Layout-Comps/AccountLayout";
+import LoadingModal from "@Ui-Comps/AccountModals/LoadingModal";
 
-import classes from "../../../style/watchlist.module.css";
+import classes from "@styles/watchlist.module.css";
 
 const Watchlist = () => {
   const [watchlistNavigation, setWatchlistNavigation] = useState("movies");

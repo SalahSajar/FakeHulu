@@ -1,6 +1,6 @@
 import {Fragment} from 'react';
 
-import classes from "../../../style/subscriptionFeaturesIncludedModal.module.css";
+import classes from "@styles/subscriptionFeaturesIncludedModal.module.css";
 
 const SubscriptionFeaturesIncludedModal = () => {
   return (

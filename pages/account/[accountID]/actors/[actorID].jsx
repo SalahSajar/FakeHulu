@@ -2,13 +2,13 @@ import React, { useEffect, Fragment } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { useFetchDetails } from "../../../../lib/customHooks/useFetchDetails";
+import { useFetchDetails } from "@customHooks/useFetchDetails";
 
-import AccountLayout from "../../../../components/Layout/AccountLayout";
-import ShowsSlider from "../../../../components/Ui/ShowsSlider";
+import AccountLayout from "@Layout-Comps/AccountLayout";
+import ShowsSlider from "@Ui-Comps/ShowsSlider";
 
-import classes from "../../../../style/actor.module.css";
-import LoadingModal from "../../../../components/Ui/AccountModals/LoadingModal";
+import classes from "@styles/actor.module.css";
+import LoadingModal from "@Ui-Comps/AccountModals/LoadingModal";
 
 const Actor = () => {
   const { actorID } = useRouter().query;

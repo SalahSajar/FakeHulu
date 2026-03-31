@@ -1,6 +1,6 @@
 import Layout from "../Layout/Layout";
 
-import classes from "../../style/Footer.module.css";
+import classes from "@styles/Footer.module.css";
 
 const Footer = () => {
   const changeFooterContentColumnState__FUNC = (e) => {
@@ -12,28 +12,17 @@ const Footer = () => {
       : e.target.setAttribute("aria-expanded", "false");
   };
   return (
-    <footer
-      id="welcomePage_footer--EL"
-      className={classes["welcomePage_footer--EL"]}
-    >
+    <footer id="welcomePage_footer--EL" className={classes["welcomePage_footer--EL"]} >
       <Layout>
-        <div
-          className={`f-start-between ${classes["welcomePage_footer_content--CONTAINER"]}`}
-        >
-          <div
-            className={`${classes["footer_contentColumn--CONTAINER"]} ${classes["browseHuluNetworks_contentColumn--EL"]}`}
-          >
-            <h5 className={classes["footer_contentColumn_title--EL"]}>
-              browse
-            </h5>
+        <div className={`f-start-between ${classes["welcomePage_footer_content--CONTAINER"]}`} >
+          <div className={`${classes["footer_contentColumn--CONTAINER"]} ${classes["browseHuluNetworks_contentColumn--EL"]}`} >
+            <h5 className={classes["footer_contentColumn_title--EL"]}> browse </h5>
             <span
               onClick={changeFooterContentColumnState__FUNC}
               role="button"
               aria-expanded="false"
               className={classes["footer_contentColumn_title--EL"]}
-            >
-              browse
-            </span>
+            > browse </span>
             <div
               className={`f-start-between ${classes["footer_column_content--CONTAINER"]}`}
             >

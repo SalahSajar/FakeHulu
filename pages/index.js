@@ -4,7 +4,7 @@ import {useRouter} from "next/router";
 import {auth} from "../lib/configs/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 
-import LoadingModal from "../components/Ui/AccountModals/LoadingModal";
+import LoadingModal from "@Ui-Comps/AccountModals/LoadingModal";
 
 export default function Home() {
   const router = useRouter();

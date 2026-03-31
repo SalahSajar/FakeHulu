@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-import classes from "../../style/SignupLayout.module.css";
+import classes from "@styles/SignupLayout.module.css";
 
 const SignupLayout = ({children, size}) => {
   return (

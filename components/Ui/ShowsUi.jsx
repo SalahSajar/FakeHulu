@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 
-import { GenresContext } from "../../lib/genresContext";
+import { GenresContext } from "@lib/genresContext";
 
-import classes from "../../style/ShowsUi.module.css";
+import classes from "@styles/ShowsUi.module.css";
 
 const ShowsUi = ({ type, showsData }) => {
   const router = useRouter();
