@@ -2,14 +2,14 @@ import { Fragment, useState } from "react";
 import Link from "next/link";
 import {useRouter} from "next/router";
 
-import { auth } from "../../../lib/configs/firebaseConfig";
+import { auth } from "@lib/configs/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 import ReCAPTCHA from "react-google-recaptcha";
 
-import InDevEnv from "@lib/scripts/CheckIfInDevEnv";
+import {InDevEnv} from "@lib/scripts/CheckIfInDevEnv";
 
-import classes from "../../../style/LoginModal.module.css";
+import classes from "@styles/LoginModal.module.css";
 
 const LoginModal = () => {
   const router = useRouter();
