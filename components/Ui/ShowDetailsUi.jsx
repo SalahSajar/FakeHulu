@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import { auth } from "@lib/configs/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 
-import { useWatchlist } from "@lcustomHooks/useWatchlist";
-import { useUserAuth } from "@lcustomHooks/useUserAuth";
+import { useWatchlist } from "@customHooks/useWatchlist";
+import { useUserAuth } from "@customHooks/useUserAuth";
 
 import { UserWatchlistContext } from "@lib/userWatchlistContext";
 
