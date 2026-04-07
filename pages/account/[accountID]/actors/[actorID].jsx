@@ -7,6 +7,8 @@ import { useFetchDetails } from "@customHooks/useFetchDetails";
 import AccountLayout from "@Layout-Comps/AccountLayout";
 import ShowsSlider from "@Ui-Comps/ShowsSlider";
 
+import ActorSocialMediaLink from "@Micro-Comps/ActorSocialMediaLink";
+
 import classes from "@styles/actor.module.css";
 import LoadingModal from "@Ui-Comps/AccountModals/LoadingModal";
 
@@ -57,114 +59,43 @@ const Actor = () => {
                 <section className={classes["actor_details--BLOCK"]}>
                   <div className={classes["actor_details_content--CONTAINER"]}>
                     <div className={classes["actor_poster--CONTAINER"]}>
-                      <img
-                        src={
-                          !actorDetails.profile_path
-                            ? `${
-                                actorDetails.gender === 1
-                                  ? "/assets/accountPage-assets/default_images/default-female-avatar.jpg"
-                                  : "/assets/accountPage-assets/default_images/default-male-avatar.jpg"
-                              }`
-                            : `https://www.themoviedb.org/t/p/original${actorDetails.profile_path}`
-                        }
-                        alt="poster"
-                        loading="eager"
-                      />
+                      <img src={!actorDetails.profile_path ? `${actorDetails.gender === 1
+                            ? "/assets/accountPage-assets/default_images/default-female-avatar.jpg"
+                            : "/assets/accountPage-assets/default_images/default-male-avatar.jpg"
+                        }`: `https://www.themoviedb.org/t/p/original${actorDetails.profile_path}`
+                      } alt="poster" loading="eager" />
                     </div>
+
                     <div className={classes["actor_infos--CONTAINER"]}>
                       <div className={classes["actor_infos_header--EL"]}>
-                        <h2 className={classes["actor_name--EL"]}>
-                          {actorDetails.name}
-                        </h2>
+                        <h2 className={classes["actor_name--EL"]}>{actorDetails.name}</h2>
                         <span className={classes["actor_birth_infos--EL"]}>
                           {actorDetails.gender === 1 ? "female" : "male"}{" "}
                           &#x2726; {actorDetails.birthday}{" "}
-                          {!!actorDetails.deathday &&
-                            `to ${actorDetails.deathday}`}{" "}
+                          {!!actorDetails.deathday && `to ${actorDetails.deathday}`}{" "}
                           (
-                          {!!actorDetails.deathday
-                            ? Math.floor(
-                                (new Date(actorDetails.deathday).getTime() -
-                                  new Date(actorDetails.birthday).getTime()) /
-                                  31536000000
-                              )
-                            : Math.floor(
-                                (new Date().getTime() -
-                                  new Date(actorDetails.birthday).getTime()) /
-                                  31536000000
-                              )}{" "}
+                          {!!actorDetails.deathday ?
+                            Math.floor((new Date(actorDetails.deathday).getTime() - new Date(actorDetails.birthday).getTime()) /31536000000) :
+                            Math.floor((new Date().getTime() -new Date(actorDetails.birthday).getTime()) /31536000000)}{" "}
                           years old) &#x2726; {actorDetails.place_of_birth}
                         </span>
                       </div>
                       {!!actorDetails.biography && (
                         <div className={classes["actor_Biography--WRAPPER"]}>
-                          <h5
-                            className={`${classes["actor_info_header--EL"]} ${classes["actor_biography_header--EL"]}`}
-                          >
-                            Biography
-                          </h5>
-                          <p className={classes["actor_biography--EL"]}>
-                            {actorDetails.biography}
-                          </p>
+                          <h5 className={`${classes["actor_info_header--EL"]} ${classes["actor_biography_header--EL"]}`} > Biography </h5>
+                          <p className={classes["actor_biography--EL"]}> {actorDetails.biography} </p>
                         </div>
                       )}
                       {!actorSocialMedia.instagram_id &&
                       !actorSocialMedia.twitter_id &&
-                      !actorSocialMedia.facebook_id ? (
-                        ""
-                      ) : (
+                      !actorSocialMedia.facebook_id ? "" : (
                         <div className={classes["actor_socialMedia--WRAPPER"]}>
-                          <h5
-                            className={`${classes["actor_info_header--EL"]} ${classes["actor_biography_header--EL"]}`}
-                          >
-                            social media
-                          </h5>
+                          <h5 className={`${classes["actor_info_header--EL"]} ${classes["actor_biography_header--EL"]}`} > social media </h5>
 
-                          <ul
-                            className={classes["actor_socialMedia_links--LIST"]}
-                          >
-                            {!!actorSocialMedia.instagram_id && (
-                              <li>
-                                <a
-                                  href={`https://www.instagram.com/${actorSocialMedia.instagram_id}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <img
-                                    src="/assets/accountPage-assets/icons/instagram.png"
-                                    alt={` ininstagram`}
-                                  />
-                                </a>
-                              </li>
-                            )}
-                            {!!actorSocialMedia.twitter_id && (
-                              <li>
-                                <a
-                                  href={`https://twitter.com/${actorSocialMedia.twitter_id}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <img
-                                    src="/assets/accountPage-assets/icons/twitter.png"
-                                    alt={` twitter`}
-                                  />
-                                </a>
-                              </li>
-                            )}
-                            {!!actorSocialMedia.facebook_id && (
-                              <li>
-                                <a
-                                  href={`https://www.facebook.com/${actorSocialMedia.facebook_id}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <img
-                                    src="/assets/accountPage-assets/icons/facebook.png"
-                                    alt={` facebook`}
-                                  />
-                                </a>
-                              </li>
-                            )}
+                          <ul className={classes["actor_socialMedia_links--LIST"]} >
+                            {!!actorSocialMedia.instagram_id && <ActorSocialMediaLink type="instagram" id={actorSocialMedia.instagram_id} />}
+                            {!!actorSocialMedia.twitter_id && <ActorSocialMediaLink type="x" id={actorSocialMedia.twitter_id} />}
+                            {!!actorSocialMedia.facebook_id && <ActorSocialMediaLink type="facebook" id={actorSocialMedia.facebook_id} />}
                           </ul>
                         </div>
                       )}
@@ -174,38 +105,18 @@ const Actor = () => {
 
                 <div className={classes["actor_work--CONTAINER"]}>
                   {actorMovies.length && (
-                    <article
-                      className={`${classes["actor_work--BLOCK"]} ${classes["actor_movies--BLOCK"]}`}
-                    >
-                      <h3 className={classes["actor_work_header--EL"]}>
-                        movies {actorDetails.name} was in:
-                      </h3>
-                      <section>
-                        <ShowsSlider
-                          showsArr={actorMovies.sort(
-                            (a, b) => b.popularity - a.popularity
-                          )}
-                          type="movies"
-                        />
-                      </section>
+                    <article className={`${classes["actor_work--BLOCK"]} ${classes["actor_movies--BLOCK"]}`} >
+                      <ShowsSlider showsArr={actorMovies.sort( (a, b) => b.popularity - a.popularity )} type="movies" >
+                        movies {actorDetails.name} was in: 
+                      </ShowsSlider>
                     </article>
                   )}
 
                   {!!actorTvShows.length && (
-                    <article
-                      className={`${classes["actor_work--BLOCK"]} ${classes["actor_tvShows--BLOCK"]}`}
-                    >
-                      <h3 className={classes["actor_work_header--EL"]}>
-                        TV shows {actorDetails.name} was in:
-                      </h3>
-                      <section>
-                        <ShowsSlider
-                          showsArr={actorTvShows.sort(
-                            (a, b) => b.popularity - a.popularity
-                          )}
-                          type="tvShows"
-                        />
-                      </section>
+                    <article className={`${classes["actor_work--BLOCK"]} ${classes["actor_tvShows--BLOCK"]}`} >
+                      <ShowsSlider showsArr={actorTvShows.sort((a, b) => b.popularity - a.popularity)} type="tvShows" >
+                        TV shows {actorDetails.name} was in: 
+                      </ShowsSlider>
                     </article>
                   )}
                 </div>

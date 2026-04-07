@@ -11,8 +11,7 @@ let firstRenderBlocker = true;
 const SearchLayout = ({ children, type, accountPage }) => {
   const [searchValue, setSearchValue] = useState("");
 
-  const { searchMostPapularActors, searchTrendingShows, searchHandler } =
-    useContext(SearchContext);
+  const { searchMostPapularActors, searchTrendingShows, searchHandler } = useContext(SearchContext);
 
   const defaultSearchHandler = () => {
     if (type === "person") searchMostPapularActors();
@@ -56,41 +55,21 @@ const SearchLayout = ({ children, type, accountPage }) => {
               {type === "movie" && <h2>Search for Your Favorite Movie</h2>}
               {type === "tv" && <h2>Search for Your Favorite TV Shows</h2>}
 
-              <form
-                className={classes["search_form--EL"]}
-                onSubmit={(e) => submitSearchHandler(e)}
-              >
-                <div
-                  className={`f-center-center ${classes["search_form_content--WRAPPER"]}`}
-                >
+              <form className={classes["search_form--EL"]} onSubmit={(e) => submitSearchHandler(e)}>
+                <div className={`f-center-center ${classes["search_form_content--WRAPPER"]}`} >
                   <input
                     className={classes["search_input--EL"]}
                     type="text"
-                    placeholder={
-                      type === "person"
-                        ? "Search for an Actor"
-                        : type === "movie"
-                        ? "Search for a Movie"
-                        : "Search for a TV Show"
-                    }
+                    placeholder={ type === "person" ? "Search for an Actor" : type === "movie" ? "Search for a Movie" : "Search for a TV Show" }
                     name="search"
                     id="search"
                     onChange={changeSearchHandler}
                   />
-                  <button
-                    type="submit"
-                    className={classes["search_form_submit--BTN"]}
-                  >
-                    Search
-                  </button>
+                  <button type="submit" className={classes["search_form_submit--BTN"]} > Search </button>
                 </div>
               </form>
 
-              <button
-                type="button"
-                className={classes["defaultSearch--BTN"]}
-                onClick={defaultSearchHandler}
-              >
+              <button type="button" className={classes["defaultSearch--BTN"]} onClick={defaultSearchHandler} >
                 {type === "person" && "most Popular Actors"}
                 {type === "movie" && "trending Movies"}
                 {type === "tv" && "trending TV Shows"}

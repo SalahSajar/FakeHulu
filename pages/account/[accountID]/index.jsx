@@ -71,7 +71,7 @@ const account = () => {
                   />
                 </section>
                 <section className={classes["showsType--CONTAINER"]}>
-                  <h4 className={classes["showsType_header--EL"]}>best Movies in Historty</h4>
+                  <h4 className={classes["showsType_header--EL"]}>best Movies in History</h4>
 
                   <ShowsUi
                     type="movies"
@@ -79,7 +79,7 @@ const account = () => {
                   />
                 </section>
                 <section className={classes["showsType--CONTAINER"]}>
-                  <h4 className={classes["showsType_header--EL"]}>best TV Shows in Historty</h4>
+                  <h4 className={classes["showsType_header--EL"]}>best TV Shows in History</h4>
 
                   <ShowsUi
                     type="tvShows"

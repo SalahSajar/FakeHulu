@@ -9,7 +9,7 @@ const ShowsSlider = ({ children, showsArr, type }) => {
 
   return (
     <section className={classes["similarShowRecommendations__BLOCK"]}>
-      <h2 className={classes["similarShowRecommendations__TITLE"]}>{children}</h2>
+      {!!children && <h2 className={classes["similarShowRecommendations__TITLE"]}>{children}</h2>}
 
       <div className={classes["similarShowRecommendations__LIST"]}>
         {showsArr.map(({id, title, original_title, name, original_name, poster_path }) => {

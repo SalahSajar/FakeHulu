@@ -23,12 +23,11 @@ const Movies = () => {
       <Head>
         <title>Explore TV Shows | Hulu</title>
       </Head>
+      
       <SearchLayout type="tv" accountPage="tvShows">
         <section className={classes["searchResults_section--EL"]}>
           <div className={classes["searchResults_content--BLOCK"]}>
-            {loading ? (
-              <LoadingModal />
-            ) : error ? (
+            {loading ? <LoadingModal /> : error ? (
               <div className={classes["error_modal--EL"]}>
                 <div className={classes["error_content_block--EL"]}>
                   <p className={classes["error_message--EL"]}>
@@ -37,18 +36,12 @@ const Movies = () => {
                 </div>
               </div>
             ) : (
-              !!showsFounded &&
-              (showsFounded.length ? (
-                <SearchResultsModal
-                  searchResults={showsFounded}
-                  type="tvShows"
-                />
+              !!showsFounded && (showsFounded.length ? (
+                <SearchResultsModal searchResults={showsFounded} type="tvShows" />
               ) : (
                 <div className={classes["error_modal--EL"]}>
                   <div className={classes["error_content_block--EL"]}>
-                    <p className={classes["error_message--EL"]}>
-                      TV Show not found.
-                    </p>
+                    <p className={classes["error_message--EL"]}>TV Show not found.</p>
                   </div>
                 </div>
               ))

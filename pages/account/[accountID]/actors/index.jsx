@@ -31,14 +31,11 @@ const Actors = () => {
             ) : error ? (
               <div className={classes["error_modal--EL"]}>
                 <div className={classes["error_content_block--EL"]}>
-                  <p className={classes["error_message--EL"]}>
-                    Something went wrong, please try again later.
-                  </p>
+                  <p className={classes["error_message--EL"]}>Something went wrong, please try again later.</p>
                 </div>
               </div>
             ) : (
-              !!actorsFounded &&
-              (actorsFounded.length ? (
+              !!actorsFounded &&(actorsFounded.length ? (
                 <SearchResultsModal
                   searchResults={actorsFounded}
                   type="actors"
@@ -46,9 +43,7 @@ const Actors = () => {
               ) : (
                 <div className={classes["error_modal--EL"]}>
                   <div className={classes["error_content_block--EL"]}>
-                    <p className={classes["error_message--EL"]}>
-                      Actor not found.
-                    </p>
+                    <p className={classes["error_message--EL"]}>Actor not found.</p>
                   </div>
                 </div>
               ))

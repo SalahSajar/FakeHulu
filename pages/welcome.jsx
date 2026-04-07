@@ -48,6 +48,7 @@ export default function Welcome({ users }) {
 
   const logoutHandler = () => {
     signOut(auth);
+
     localStorage.setItem("uid", null);
     localStorage.setItem("token", null);
   };
@@ -61,6 +62,9 @@ export default function Welcome({ users }) {
   }, [displayModal]);
 
   useEffect(() => {
+    console.log("--------------------");
+    console.log("LOGOUT LOGOUT LOGOUT LOGOUT ");
+
     logoutHandler();
   }, []);
 

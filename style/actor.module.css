@@ -111,18 +111,13 @@
 
 .actor--BLOCK .actor_content--CONTAINER .actor_details--BLOCK .actor_details_content--CONTAINER .actor_infos--CONTAINER .actor_socialMedia--WRAPPER .actor_socialMedia_links--LIST a img {
   width: 3rem;
-  -webkit-filter: invert(0.9);
-          filter: invert(0.9);
 }
 
 .actor--BLOCK .actor_content--CONTAINER .actor_work--CONTAINER .actor_work--BLOCK:not(:last-of-type) {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
-.actor--BLOCK .actor_content--CONTAINER .actor_work--CONTAINER .actor_work_header--EL {
-  font-size: 1.8rem;
-  color: #fff;
-  font-size: 500;
-  text-transform: capitalize;
+.actor--BLOCK .actor_content--CONTAINER .actor_work--CONTAINER .actor_work--BLOCK > section{
+  padding: 0;
 }
 /*# sourceMappingURL=actor.module.css.map */

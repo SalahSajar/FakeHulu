@@ -17,7 +17,8 @@ const LoginModal = () => {
   const [loginError, setLoginError] = useState(false);
   const [loginErrorType, setLoginErrorType] = useState(null);
 
-  const [recaptchaValue, setRecaptchaValue] = useState(null);
+  const [recaptchaValue, setRecaptchaValue] = useState(InDevEnv ? true : null);
+
 
   const verifyCallback = (value) => setRecaptchaValue(value);
 
@@ -27,8 +28,7 @@ const LoginModal = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // if (email && password && recaptchaValue) {
-    if (email && password) {
+    if (email && password && recaptchaValue) {
       signInWithEmailAndPassword(auth, email, password).then((loginRes) => {
           router.replace(`/account/${loginRes.user.uid}`);
           document.querySelector("body").style.overflowY = "scroll";
@@ -43,12 +43,9 @@ const LoginModal = () => {
           console.log(err.message);
           setLoginError(true);
 
-          err.message.includes("auth/user-not-found") &&
-            setLoginErrorType("userNotFound");
-          err.message.includes("auth/wrong-password") &&
-            setLoginErrorType("wrongPassword");
-          err.message.includes("auth/network-request-failed") &&
-            setLoginErrorType("failedRequest");
+          err.message.includes("auth/user-not-found") && setLoginErrorType("userNotFound");
+          err.message.includes("auth/wrong-password") && setLoginErrorType("wrongPassword");
+          err.message.includes("auth/network-request-failed") && setLoginErrorType("failedRequest");
         });
     }
   };
@@ -56,6 +53,7 @@ const LoginModal = () => {
   return (
     <Fragment>
       <h3 className={classes["loginModal_title--EL"]}>Log In</h3>
+
       <form onSubmit={submitLoginFormHandler} className={classes["login_form--EL"]} >
         <span className={`${classes["loginError--EL"]} ${ loginError && classes["loginErrorActivate"]}`} >
           {!!loginErrorType && loginErrorType === "userNotFound" && "Error: User not Found"}
@@ -78,12 +76,15 @@ const LoginModal = () => {
         <a href="#" className={classes["findEmailOrPassword_btn--EL"]}>
           Forgot your email or password?
         </a>
-        <div className={classes["recaptch_block--CONTAINER"]}>
-          <ReCAPTCHA
-            sitekey={InDevEnv ? process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY : process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA__SITEKEY}
-            onChange={verifyCallback}
-          />
-        </div>
+        
+        {!InDevEnv && (
+          <div className={classes["recaptch_block--CONTAINER"]}>
+            <ReCAPTCHA
+              sitekey={InDevEnv ? process.env.NEXT_PUBLIC__RECAPTCHA__SITEKEY : process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA__SITEKEY}
+              onChange={verifyCallback} />
+          </div>
+        )}
+        
         <button type="submit" className={classes["login_btn--EL"]}> LOG IN </button>
       </form>
       <span className={classes["signUp_directioning--EL"]}>

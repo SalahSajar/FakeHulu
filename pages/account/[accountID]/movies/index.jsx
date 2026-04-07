@@ -11,8 +11,7 @@ import LoadingModal from "@Ui-Comps/AccountModals/LoadingModal";
 import classes from "@styles/movies.module.css";
 
 const Movies = () => {
-  const { searchTrendingShows, showsFounded, loading, error } =
-    useContext(SearchContext);
+  const { searchTrendingShows, showsFounded, loading, error } = useContext(SearchContext);
 
   useEffect(() => {
     searchTrendingShows("movie");
@@ -23,6 +22,7 @@ const Movies = () => {
       <Head>
         <title>Explore Movies | Hulu</title>
       </Head>
+
       <SearchLayout type="movie" accountPage="movies">
         <section className={classes["searchResults_section--EL"]}>
           <div className={classes["searchResults_content--BLOCK"]}>
@@ -31,24 +31,17 @@ const Movies = () => {
             ) : error ? (
               <div className={classes["error_modal--EL"]}>
                 <div className={classes["error_content_block--EL"]}>
-                  <p className={classes["error_message--EL"]}>
-                    Something went wrong, please try again later.
-                  </p>
+                  <p className={classes["error_message--EL"]}> Something went wrong, please try again later. </p>
                 </div>
               </div>
             ) : (
               !!showsFounded &&
               (showsFounded.length ? (
-                <SearchResultsModal
-                  searchResults={showsFounded}
-                  type="movies"
-                />
+                <SearchResultsModal searchResults={showsFounded} type="movies" />
               ) : (
                 <div className={classes["error_modal--EL"]}>
                   <div className={classes["error_content_block--EL"]}>
-                    <p className={classes["error_message--EL"]}>
-                      Movie not found.
-                    </p>
+                    <p className={classes["error_message--EL"]}> Movie not found. </p>
                   </div>
                 </div>
               ))

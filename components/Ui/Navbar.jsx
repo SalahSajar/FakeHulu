@@ -17,6 +17,12 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
 
   const changeNavbarMenuState = () => setNavbarMenuIsOpen((prev) => !prev);
 
+  function handleOpenLoginModel(evt){
+    evt.preventDefault();
+
+    changeModalStateHandler(evt, "logIn", true)
+  }
+
   useEffect(() => {
     const navbar_menu_EL = document.querySelector(
       `.${classes["accountSubpages_links--CONTAINER"]}`
@@ -151,13 +157,7 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
             </span>
           )}
 
-          {!page && (
-            <Link href="javascript:void(0)">
-              <span onClick={(e) => changeModalStateHandler(e, "logIn", true)}>
-                log in
-              </span>
-            </Link>
-          )}
+          {!page && <Link onClick={handleOpenLoginModel} href="#">log in</Link>}
         </header>
       )}
     </Fragment>
