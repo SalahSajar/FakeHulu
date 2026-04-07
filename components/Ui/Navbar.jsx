@@ -157,7 +157,7 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
             </span>
           )}
 
-          {!page && <Link onClick={handleOpenLoginModel} href="#">log in</Link>}
+          {!page && <Link onClick={handleOpenLoginModel} href="/">log in</Link>}
         </header>
       )}
     </Fragment>
