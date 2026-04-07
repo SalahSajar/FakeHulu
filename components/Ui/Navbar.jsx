@@ -24,97 +24,55 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
   }
 
   useEffect(() => {
-    const navbar_menu_EL = document.querySelector(
-      `.${classes["accountSubpages_links--CONTAINER"]}`
-    );
+    const navbar_menu_EL = document.querySelector(`.${classes["accountSubpages_links--CONTAINER"]}`);
+
     if (!!navbar_menu_EL) {
-      const classNameCheck = navbar_menu_EL.classList.contains(
-        classes["openNavbarMenu"]
-      );
-      classNameCheck &&
-        navbar_menu_EL.classList.remove(classes["openNavbarMenu"]);
+      const classNameCheck = navbar_menu_EL.classList.contains(classes["openNavbarMenu"]);
+      classNameCheck && navbar_menu_EL.classList.remove(classes["openNavbarMenu"]);
     }
   }, [asPath]);
 
   return (
     <Fragment>
       {page === "accountNavbar" ? (
-        <header
-          className={`f-center-between ${classes["mainNavbar--EL"]} ${classes["accountNavbar--EL"]}`}
-        >
-          <button
-            className={classes["navbar_menu--BTN"]}
-            onClick={changeNavbarMenuState}
-          >
-            <img
-              src="/assets/accountPage-assets/icons/menu.png"
-              alt="close navbar menu icon"
-            />
+        <header className={`f-center-between ${classes["mainNavbar--EL"]} ${classes["accountNavbar--EL"]}`} >
+          <button className={classes["navbar_menu--BTN"]} onClick={changeNavbarMenuState} >
+            <img src="/assets/accountPage-assets/icons/menu.png" alt="close navbar menu icon" />
           </button>
 
           <nav>
-            <ul
-              className={`${classes["accountSubpages_links--CONTAINER"]} ${
-                navbarMenuIsOpen && classes["openNavbarMenu"]
-              }`}
-            >
+            <ul className={`${classes["accountSubpages_links--CONTAINER"]} ${ navbarMenuIsOpen && classes["openNavbarMenu"] }`} >
               <li>
                 <Link href={`/account/${accountID}`}>
-                  <span
-                    className={`${classes["account_subpage_link--EL"]} ${
-                      classes["homeLink"]
-                    } ${params === "home" ? classes["activeLink"] : ""}`}
-                  >
+                  <span className={`${classes["account_subpage_link--EL"]} ${classes["homeLink"]} ${params === "home" ? classes["activeLink"] : ""}`}>
                     <img src={`${accountIconsPath}/home.png`} alt="Home" />
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href={`/account/${accountID}/watchlist`}>
-                  <span
-                    className={`${classes["account_subpage_link--EL"]} ${
-                      classes["playlistLink"]
-                    } ${params === "watchlist" ? classes["activeLink"] : ""}`}
-                  >
-                    <img
-                      src={`${accountIconsPath}/video-playlist.png`}
-                      alt="Playlist"
-                    />
+                  <span className={`${classes["account_subpage_link--EL"]} ${classes["playlistLink"]} ${params === "watchlist" ? classes["activeLink"] : ""}`}>
+                    <img src={`${accountIconsPath}/video-playlist.png`} alt="Playlist" />
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href={`/account/${accountID}/movies`}>
-                  <span
-                    className={`${classes["account_subpage_link--EL"]} ${
-                      classes["moviesLink"]
-                    } ${params === "movies" ? classes["activeLink"] : ""}`}
-                  >
+                  <span className={`${classes["account_subpage_link--EL"]} ${classes["moviesLink"]} ${params === "movies" ? classes["activeLink"] : ""}`}>
                     <img src={`${accountIconsPath}/movie.png`} alt="Movie" />
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href={`/account/${accountID}/tvShows`}>
-                  <span
-                    className={`${classes["account_subpage_link--EL"]} ${
-                      classes["tvShowsLink"]
-                    } ${params === "tvShows" ? classes["activeLink"] : ""}`}
-                  >
-                    <img
-                      src={`${accountIconsPath}/tv-show.png`}
-                      alt="TV Show"
-                    />
+                  <span className={`${classes["account_subpage_link--EL"]} ${classes["tvShowsLink"]} ${params === "tvShows" ? classes["activeLink"] : ""}`}>
+                    <img src={`${accountIconsPath}/tv-show.png`} alt="TV Show" />
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href={`/account/${accountID}/actors`}>
-                  <span
-                    className={`${classes["account_subpage_link--EL"]} ${
-                      classes["usersLink"]
-                    } ${params === "actors" ? classes["activeLink"] : ""}`}
-                  >
+                  <span className={`${classes["account_subpage_link--EL"]} ${classes["usersLink"]} ${params === "actors" ? classes["activeLink"] : ""}`}>
                     <img src={`${accountIconsPath}/users.png`} alt="Actors" />
                   </span>
                 </Link>

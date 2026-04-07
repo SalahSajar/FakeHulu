@@ -18,11 +18,11 @@
 }
 
 .movies--SECTION .shows_Highlighter--EL .showsType--CONTAINER .showsType_header--EL {
-  color: #aaa;
+  color: #00ed82;
   font-size: 1.6rem;
   font-weight: 400;
   text-transform: capitalize;
-  margin-bottom: 3rem;
+  margin-bottom: 1.7rem;
 }
 
 .movies--SECTION .shows_Highlighter--EL .showsType--CONTAINER .shows--CONTAINER {
