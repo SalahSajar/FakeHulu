@@ -19,6 +19,9 @@ const LoginModal = () => {
 
   const [recaptchaValue, setRecaptchaValue] = useState(InDevEnv ? true : null);
 
+  console.log(process.env."---RECAPTCHA SITEKEY")
+  console.log(process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA__SITEKEY)
+
 
   const verifyCallback = (value) => setRecaptchaValue(value);
 
@@ -80,7 +83,7 @@ const LoginModal = () => {
         {!InDevEnv && (
           <div className={classes["recaptch_block--CONTAINER"]}>
             <ReCAPTCHA
-              sitekey={InDevEnv ? process.env.NEXT_PUBLIC__RECAPTCHA__SITEKEY : process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA__SITEKEY}
+              sitekey={process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA__SITEKEY}
               onChange={verifyCallback} />
           </div>
         )}
