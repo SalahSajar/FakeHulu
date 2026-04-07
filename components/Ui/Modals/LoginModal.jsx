@@ -19,7 +19,7 @@ const LoginModal = () => {
 
   const [recaptchaValue, setRecaptchaValue] = useState(InDevEnv ? true : null);
 
-  console.log(process.env."---RECAPTCHA SITEKEY")
+  console.log("---RECAPTCHA SITEKEY")
   console.log(process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA__SITEKEY)
 
 
