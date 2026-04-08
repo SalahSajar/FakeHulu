@@ -19,10 +19,6 @@ const LoginModal = () => {
 
   const [recaptchaValue, setRecaptchaValue] = useState(InDevEnv ? true : null);
 
-  console.log("---RECAPTCHA SITEKEY")
-  console.log(process.env.NEXT_PUBLIC_VERCEL_RECAPTCHA__SITEKEY)
-
-
   const verifyCallback = (value) => setRecaptchaValue(value);
 
   const submitLoginFormHandler = (e) => {
