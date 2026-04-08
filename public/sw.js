@@ -1,4 +1,4 @@
-const FakeHulu_mainCache_key = "FakeHulu_mainCache_key_v1.2";
+const FakeHulu_mainCache_key = "FakeHulu_mainCache_key_v1.4";
 
 const assets = [
     "/welcome",
