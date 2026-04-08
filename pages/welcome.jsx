@@ -62,9 +62,6 @@ export default function Welcome({ users }) {
   }, [displayModal]);
 
   useEffect(() => {
-    console.log("--------------------");
-    console.log("LOGOUT LOGOUT LOGOUT LOGOUT ");
-
     logoutHandler();
   }, []);
 

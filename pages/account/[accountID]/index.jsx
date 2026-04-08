@@ -31,8 +31,6 @@ const account = () => {
     fetchGenresHandler();
   }, []);
 
-  console.log(accountHomePageShows)
-
   return (
     <Fragment>
       <Head>
