@@ -50,7 +50,7 @@
 }
 
 .login_form--EL .recaptch_block--CONTAINER {
-  margin: 3.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .login_form--EL .login_btn--EL {
@@ -65,11 +65,12 @@
   background-color: #828282;
   color: #fff;
   cursor: pointer;
+  margin-top: 1.5rem;
 }
 
 .signUp_directioning--EL {
   display: block;
-  margin-top: 5rem;
+  margin-top: 4rem;
   text-align: center;
   font-size: 1.2rem;
   color: #636e85;

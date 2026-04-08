@@ -91,18 +91,14 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
 
           <span className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
             <img
-              src="/assets/accountPage-assets/logos/hulu-white.png"
+              src="/assets/welcomePage-assets/logos/logo.png"
               role="logo"
-              alt="white hulu logo"
+              alt="Hulu logo"
             />
           </span>
         </header>
       ) : (
-        <header
-          className={`f-center-between ${classes["mainNavbar--EL"]} ${
-            !!page && classes["signupPage_navbar--EL"]
-          }`}
-        >
+        <header className={`f-center-between ${classes["mainNavbar--EL"]} ${ !!page && classes["signupPage_navbar--EL"] }`} >
           {page === "signup" ? (
             <Link href="/welcome">
               <span className={`${classes["hulu_nav_logo--WRAPPER"]}`}>
@@ -115,7 +111,8 @@ const Navbar = ({ changeModalStateHandler, page, params }) => {
             </span>
           )}
 
-          {!page && <Link onClick={handleOpenLoginModel} href="/">log in</Link>}
+          {/*{!page && <Link onClick={handleOpenLoginModel} href="/">log in</Link>}*/}
+          {!page && <button className={classes["openLoginModal__BTN"]} onClick={handleOpenLoginModel}>log in</button>}
         </header>
       )}
     </Fragment>

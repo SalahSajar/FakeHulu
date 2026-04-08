@@ -3,6 +3,8 @@ import React, {Fragment} from 'react';
 import classes from "@styles/SignupLayout.module.css";
 
 const SignupLayout = ({children, size}) => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <Fragment>
       <section className={classes["signupContent--CONTAINER"]}>
@@ -17,7 +19,8 @@ const SignupLayout = ({children, size}) => {
           <li><a href="#">privacy policy</a></li>
           <li><a href="#">Do Not Sell My Personal Information</a></li>
           <li><a href="#">Your California Privacy Right</a></li>
-          <li>&#169; 2022 Hulu, LLC</li>
+
+          <li>&#169; {currentYear} Hulu, LLC</li>
       </ul>
       </footer>
     </Fragment>
